@@ -1,0 +1,128 @@
+@import "../../utilsScss/mixins.scss";
+@import "../../utilsScss/colors.scss";
+form {
+  @include flex;
+}
+
+.form {
+  @include flex;
+  margin-bottom: 90px;
+
+  &__inner {
+    @include grid-form;
+    margin-bottom: 64px;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    border: 1px solid $grey-input;
+    border-radius: 4px;
+    padding: 10px 12px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0.28px;
+    }
+  }
+
+  &__button {
+    @include black-button;
+    z-index: 3;
+  }
+}
+
+.error {
+  border-color: #e51f1f;
+
+  &-message {
+    padding-top: 5px;
+    font-size: 10px;
+    color: #e51f1f;
+  }
+}
+
+.label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding-bottom: 8px;
+  display: none;
+
+  @include onMobile {
+    display: block;
+  }
+}
+
+.custom-select__inner {
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    width: 14px;
+    height: 14px;
+  }
+  p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+    color: #cbcbd4;
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    z-index: 4;
+    border-radius: 0 0 4px 4px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+    p {
+      padding: 10px 0 10px 12px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0.28px;
+      color: #CBCBD4;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+
+
+    .selected {
+      color: black;
+      background-color: #F7F7F9;
+    }
+  }
+}
+
+.dropdown-opened {
+  display: block;
+}
+
+.custom-label {
+  font-size: 14px;
+}

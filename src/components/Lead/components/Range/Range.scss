@@ -1,0 +1,50 @@
+@import "../../utilsScss/colors.scss";
+@import "../../utilsScss/mixins.scss";
+
+.range {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+
+  &-kwh {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 32px;
+    width: 570px;
+
+    @include onTablet {
+      width: 550px;
+    }
+
+    @include onMobile {
+      width: 342px;
+      justify-content: space-between;
+    }
+
+    span {
+      border: 2px solid $main-black;
+      border-radius: 4px;
+      padding: 0 28px;
+    }
+  }
+
+  &-input {
+    border: 2px solid $main-black;
+    border-radius: 4px;
+    font-family: "Metropolis", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+    width: 125px;
+    padding: 0 28px;
+    outline: none;
+
+  }
+
+
+  &-minmax {
+    display: flex;
+    justify-content: space-between;
+  }
+}

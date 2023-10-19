@@ -1,0 +1,157 @@
+@import "./colors.scss";
+
+@mixin onTablet {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (max-width: 833px) {
+    @content;
+  }
+}
+
+@mixin header {
+  h1 {
+    color: $main-black;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+  }
+
+  p {
+    color: $text-black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    width: 560px;
+    text-align: center;
+  }
+
+  @include onTablet {
+    h1 {
+      width: 632px;
+      text-align: center;
+    }
+    p {
+      width: 502px;
+      font-size: 18px;
+    }
+  }
+
+  @include onMobile {
+    h1 {
+      font-size: 20px;
+      width: 342px;
+      line-height: 34px;
+    }
+    p {
+      font-size: 14px;
+      width: 342px;
+      line-height: 24.5px;
+      letter-spacing: 0.35px; 
+    }
+  }
+}
+
+@mixin form-header {
+  @include flex;
+  margin: 48px 0;
+  @include header;
+}
+
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 324px);
+
+  @include onTablet {
+    grid-template-columns: repeat(2, 306px);
+    gap: 20px;
+  }
+
+  @include onMobile {
+    grid-template-columns: repeat(2, 160px);
+  }
+}
+
+@mixin grid-form {
+  display: grid;
+  grid-template-columns: repeat(2, 324px);
+  grid-template-rows: repeat(2, 40px);
+  gap: 28px 20px;
+
+  @include onMobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@mixin flex-five {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 24px;
+  width: 1082px;
+
+  @include onTablet {
+    width: 762px;
+    row-gap: 28px;
+  }
+
+  @include onMobile {
+    width: 342px;
+    row-gap: 24px;
+  }
+}
+
+@mixin button {
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  transition: transform 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+@mixin black-button {
+  width: 392px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: $main-black;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 0.35px;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @include onMobile {
+    width: 342px;
+  }
+}
+
+@mixin option-text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 34px;
+}

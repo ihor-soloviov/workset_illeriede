@@ -1,0 +1,14 @@
+@import "../../../utilsScss/mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 342px;
+  margin: 0 auto;
+  position: relative;
+
+  @include onDesktop {
+    min-width: 810px
+  }
+}

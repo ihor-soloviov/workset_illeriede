@@ -1,0 +1,53 @@
+@import "../../../utilsScss/mixins.scss";
+@import "../../../utilsScss/colors.scss";
+
+.procents {
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 64px;
+    h2 {
+      color: $main-red;
+      font-size: 72px;
+      font-weight: 600;
+      line-height: 106px;
+      padding-bottom: 8px;
+    }
+
+    &__name {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+
+      p {
+        color: #2e2e2e;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 173%;
+      }
+    }
+  }
+}
+
+@include onDesktop {
+  .procents {
+    margin-bottom: 150px;
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+      padding: 0 48px;
+    }
+
+    &-item {
+      border: 1px solid #d3ddeb;
+      width: 100%;
+
+      h2 {
+        padding-top: 100px;
+      }
+    }
+  }
+}

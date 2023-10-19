@@ -1,0 +1,111 @@
+@import "../../utilsScss/mixins.scss";
+@import "../../utilsScss/colors.scss";
+
+.firstStep {
+  @include flex;
+  padding-top: 72px;
+
+  @include onMobile {
+    padding-top: 60px;
+  }
+
+  &-head {
+    @include flex;
+    margin-bottom: 64px;
+
+    @include onMobile {
+      margin-bottom: 54px;
+    }
+
+    &__top {
+      @include flex;
+      margin-bottom: 64px;
+      @include header;
+
+      h1 {
+        margin-bottom: 14px;
+      }
+
+      @include onMobile {
+        margin-bottom: 32px;
+        // h1 {
+        //   max-width: 240px; 
+        // }
+
+        // p {
+        //   max-width: 240px;
+        // }
+      }
+    }
+
+    &__bot {
+      margin-bottom: 48px;
+
+      @include onMobile {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-options {
+    @include flex;
+    @include header;
+    h1 {
+      margin-bottom: 48px;
+
+      @include onTablet {
+        font-size: 24px;
+        margin-bottom: 36px;
+      }
+
+      @include onMobile {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.options__grid {
+  @include grid-two;
+  column-gap: 20px;
+}
+
+.option__grid {
+  @include flex;
+  @include option-text;
+
+  p {
+    width: max-content;
+  }
+}
+
+.grid-item {
+  @include button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 258px;
+  width: 306px;
+  margin-bottom: 16px;
+
+  &__image {
+    width: 200px;
+    height: 200px;
+  }
+
+  @include onMobile {
+    width: 160px;
+    height: 144px;
+
+    &__image {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+.slide-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}

@@ -1,0 +1,18 @@
+@import "./utilsScss/colors.scss";
+@import "./utilsScss/mixins.scss";
+
+.lead {
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.lead-container {
+  max-width: 806px;
+  margin: 0 auto;
+
+  @include onMobile {
+    width: 342px;
+  }
+}

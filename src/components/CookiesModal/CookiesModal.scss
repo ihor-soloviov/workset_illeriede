@@ -1,0 +1,152 @@
+@import "../../../utilsScss/mixins.scss";
+@import "../../../utilsScss/colors.scss";
+
+.cookiesModal {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 1500px;
+  width: 100vw;
+  background: rgba(217, 207, 207, 0.8); 
+  backdrop-filter: blur(8px);
+
+  &-inner {
+    margin-top: 70px;
+    padding: 32px 0 64px;
+    background-color: #fff;
+    border-radius: 4px;
+    width: 390px;
+
+    .container {
+      min-width: 342px;
+    }
+  }
+
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+    margin-bottom: 18px;
+  }
+
+  p {
+    color: #333;
+    text-align: center;
+    font-family: Metropolis;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 156%;
+    margin-bottom: 24px;
+  }
+
+  &-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 36px;
+    width: 97%;
+
+    a {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+      text-decoration-line: underline;
+    }
+  }
+
+  &-dropdown__items {
+    width: 97%;
+    margin-bottom: 64px;
+  }
+
+  &-dropdown__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .dropdown-left {
+      img {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  &-dropdown__text {
+    display: none;
+  }
+
+  .dropdown__text--opened {
+    display: block;
+    margin-top: 14px;
+    width: 95%;
+    padding-left: 20px;
+  }
+
+  &-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px 18px;
+    grid-template-areas:
+      "green-btn green-btn"
+      "left-btn right-btn";
+    height: 104px;
+    width: 100%;
+
+    .green-btn {
+      grid-area: green-btn;
+      background-color: #56c568;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0.35px;
+
+      &:hover {
+        background-color: #379246;
+      }
+
+      &:active {
+        background-color: #379246;
+      }
+    }
+    .left-btn {
+      grid-area: left-btn;
+    }
+    .right-btn {
+      grid-area: right-btn;
+    }
+
+    .default-btn {
+      border: 3px solid $main-black;
+      border-radius: 4px;
+      color: $main-black;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0.35px;
+
+      &:hover {
+        background-color: $main-black;
+        color: #fff;
+      }
+
+      &:active {
+        background-color: $main-black;
+        color: #fff;
+      }
+    }
+  }
+
+}

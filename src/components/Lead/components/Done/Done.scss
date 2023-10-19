@@ -1,0 +1,56 @@
+@import "../../utilsScss/mixins.scss";
+@import "../../utilsScss/colors.scss";
+
+.done {
+  @include flex;
+  padding-top: 220px;
+
+  &__swoosh {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    background-image: url("./assets/done.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 72px;
+  }
+
+  &__header {
+    @include flex;
+    margin-bottom: 64px;
+
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 40px;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 40px;
+      color: $text-black;
+    }
+
+    @include onMobile {
+      h1 {
+        font-size: 20px
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__button {
+    @include black-button;
+  }
+}
+
+.to-start {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}

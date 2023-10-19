@@ -1,0 +1,46 @@
+@import "../../utilsScss/mixins.scss";
+@import "../../utilsScss/colors.scss";
+
+.eighthStep {
+  @include flex;
+  padding-top: 132px;
+  height: 101vh;
+
+  @include onMobile {
+    padding-top:  35px;
+    height: max-content;
+  }
+
+  span {
+    font-size: 64px;
+    font-weight: 600;
+
+    @include onTablet {
+      font-size: 48px;
+    }
+
+    @include onMobile {
+      font-size: 32px;
+    }
+  }
+
+  &__header {
+    @include form-header;
+
+    @include onMobile {
+      margin: 24px 0;
+    }
+  }
+  opacity: 0;
+}
+
+.shown {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+.slide-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}

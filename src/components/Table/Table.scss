@@ -1,0 +1,46 @@
+@import "../../../utilsScss/mixins.scss";
+
+.table {
+  h1 {
+    font-family: Metropolis;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 32px;
+  }
+
+  &-swiper {
+    padding-left: 24px;
+    margin-bottom: 48px;
+  }
+}
+
+.table-swiper-slide {
+  max-width: 226px;
+}
+
+.swiper-scrollbar-drag {
+  height: 6px;
+  background-color: #e9e9e9;
+}
+
+.swiper-scrollbar-horizontal {
+  margin-left: 17px;
+  background-color: #fff;
+}
+
+@include onDesktop {
+  .table-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .table-swiper {
+    padding: 0;
+  }
+
+  .table {
+    width: 1140px;
+    margin-bottom: 94px;
+    }
+}
