@@ -1,0 +1,166 @@
+@import "../../utilsScss/colors.scss";
+@import "../../utilsScss/mixins.scss";
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 16px;
+  width: 635px;
+
+  @include onTablet {
+    width: 509px
+  }
+
+  @include onMobile {
+    width: 329px;
+    margin-bottom: 0;
+  }
+
+  &-item {
+    @include flex;
+
+    p {
+      color: $main-black;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 34px;
+      margin-top: 16px;
+
+      @include onTablet {
+        font-size: 14px;
+        line-height: 32px;
+      }
+
+      @include onMobile {
+        font-size: 14px;
+        line-height: 30px;
+      }
+    }
+
+    &:first-of-type {
+      &::after {
+        position: absolute;
+        top: 28px;
+        left: 82px;
+        display: block;
+        content: "";
+        height: 1px;
+        width: 160px;
+        background-color: $grey-input;
+      }
+    }
+
+    &:nth-of-type(2) {
+      &::after {
+        position: absolute;
+        top: 28px;
+        right: 88px;
+        display: block;
+        content: "";
+        height: 1px;
+        width: 160px;
+        background-color: $grey-input;
+      }
+    }
+
+    @include onTablet {
+      &:first-of-type {
+        &::after {
+          position: absolute;
+          top: 24px;
+          left: 81px;
+          display: block;
+          content: "";
+          height: 1px;
+          width: 110px;
+          background-color: $grey-input;
+        }
+      }
+  
+      &:nth-of-type(2) {
+        &::after {
+          position: absolute;
+          top: 24px;
+          right: 88px;
+          display: block;
+          content: "";
+          height: 1px;
+          width: 110px;
+          background-color: $grey-input;
+        }
+      }
+    }
+
+    @include onMobile {
+      &:first-of-type {
+        &::after {
+          position: absolute;
+          top: 21px;
+          left: 71px;
+          display: block;
+          content: "";
+          height: 1px;
+          width: 50px;
+          background-color: $grey-input;
+        }
+      }
+  
+      &:nth-of-type(2) {
+        &::after {
+          position: absolute;
+          top: 24px;
+          right: 72px;
+          display: block;
+          content: "";
+          height: 1px;
+          width: 50px;
+          background-color: $grey-input;
+        }
+      }
+    }
+  }
+
+  &-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border: 2px solid $main-black;
+    border-radius: 50%;
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    color: $main-black;
+
+    img {
+      width: 20px;
+      height: 20px;
+
+      @include onTablet {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    @include onTablet {
+      font-size: 20px;
+      width: 48px;
+      height: 48px;
+    }
+
+    @include onMobile {
+      font-size: 14px;
+      width: 42px;
+      height: 42px;
+    }
+  }
+}
+
+.active {
+  color: white;
+  background-color: $red-light;
+  border-color: $red-light;
+}

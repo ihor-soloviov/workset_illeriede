@@ -1,0 +1,118 @@
+@import "../../../utilsScss/mixins.scss";
+@import "../../../utilsScss/colors.scss";
+
+.zum {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  height: 100%;
+
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  padding-top: 40px;
+
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(8px);
+
+  .modal {
+    background-color: #fff;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+    &-container {
+      width: 400px;
+      padding: 24px;
+    }
+
+    &-button__close {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      margin-bottom: 46px;
+
+      button {
+        padding: 12px;
+        background-color: #f9f9fa;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    &-text {
+      line-height: 22px;
+      letter-spacing: 0.35px;
+      color: #353538;
+      margin-bottom: 32px;
+    }
+
+    &-button__sender {
+      width: 100%;
+      background-color: black;
+      color: #fff;
+      border-radius: 4px;
+      padding: 14px;
+      margin-top: 64px;
+
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0.49px;
+    }
+  }
+
+  form {
+    display: flex;
+    align-items: start;
+    margin-bottom: 64px;
+  }
+
+  .form-inner {
+    width: 100%;
+
+    p {
+      margin-bottom: 8px;
+    }
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #CBCBD4;
+      border-radius: 4px;
+      margin-bottom: 32px;
+
+      &:active {
+        outline: none;
+        border: 1px solid black;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid black;
+      }
+    }
+  }
+
+  .error {
+    border-color: #e51f1f;
+  
+    &-message {
+      padding-top: 5px;
+      font-size: 10px;
+      color: #e51f1f;
+    }
+  }
+
+  .done {
+    padding-top: 88px;
+
+    &__button {
+      width: 360px;
+      margin-bottom: 20px;
+    }
+  }
+}

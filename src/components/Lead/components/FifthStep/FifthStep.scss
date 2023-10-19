@@ -1,0 +1,17 @@
+@import "../../utilsScss/colors.scss";
+@import "../../utilsScss/mixins.scss";
+
+.fifthStep {
+  @include flex;
+  padding-top: 132px;
+
+  @include onMobile {
+    padding-top:  35px;
+  }
+
+  &-header {
+    @include header;
+    margin: 48px 0;
+    text-align: center;
+  }
+}

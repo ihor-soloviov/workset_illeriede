@@ -1,0 +1,25 @@
+@import "../../utilsScss/mixins.scss";
+@import "../../utilsScss/colors.scss";
+
+.secondStep {
+  @include flex;
+  padding-top: 132px;
+
+  @include onMobile {
+    padding-top:  35px;
+  }
+
+  &-main {
+    @include flex;
+    gap: 48px;
+    margin-bottom: 72px;
+  }
+
+  &-header {
+    @include header;
+  }
+
+  &-button {
+    @include black-button;
+  }
+}

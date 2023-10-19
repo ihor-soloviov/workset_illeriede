@@ -1,0 +1,76 @@
+@import "../../utilsScss/mixins.scss";
+
+.grid__four {
+  display: grid;
+  grid-template-columns: repeat(4, 255px);
+
+  gap: 20px 24px;
+
+  @include onTablet {
+    grid-template-columns: repeat(2, 176px);
+    gap: 20px 28px;
+  }
+
+  @include onMobile {
+    grid-template-columns: repeat(2, 160px);
+    gap: 24px 20px;
+  }
+}
+
+.grid__three {
+  display: grid;
+  grid-template-columns: repeat(3, 255px);
+  gap: 20px;
+
+  @include onTablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 372px;
+  }
+}
+
+.grid__item {
+  @include button;
+  @include option-text;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 318px;
+  padding: 35px 0 20px;
+
+  @include onTablet {
+    height: 220px;
+    width: 176px;
+
+    img {
+      width: 120px;
+      height: 120px;
+
+      padding-top:  35px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  @include onMobile {
+    height: 144px;
+    width: 160px;
+    padding: 0;
+    margin-bottom: 0;
+
+    img {
+      width: 110px;
+      height: 110px;
+
+      padding-top: 13px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

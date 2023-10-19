@@ -1,0 +1,91 @@
+@import "../../utilsScss/mixins.scss";
+@import "../../utilsScss/colors.scss";
+
+.loader__inner {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 3;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.8); /* Прозорий фон з білим кольором */
+  backdrop-filter: blur(8px);
+  min-height: 120px;
+  gap: 0.5rem;
+
+  > div {
+    margin: auto;
+  }
+}
+
+.loader {
+  position: relative;
+  color: $red-light;
+  font-size: 50px;
+  text-indent: -9999em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform: translateZ(0);
+  animation: loader4 1.75s infinite ease,
+    loader4Round 1.75s infinite ease;
+  overflow: hidden;
+
+  @keyframes loader4 {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+        -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+        -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+        -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+        -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+        -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+        -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+
+  @keyframes loader4Round {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.loader-text {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  width: 350px;
+  padding: 5px 10px;
+
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+
+  transform: translateX(-50%);
+}

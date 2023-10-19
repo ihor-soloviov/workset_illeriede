@@ -1,0 +1,85 @@
+@import "../../utilsScss/mixins.scss";
+@import "../../utilsScss/colors.scss";
+
+.seventhStep {
+  @include flex;
+  padding-top: 132px;
+
+  @include onMobile {
+    padding-top:  35px;
+  }
+
+  &__header {
+    @include form-header;
+    margin-bottom: 32px;
+    
+    @include onMobile {
+      h1 {
+        width: 300px;
+      }
+    }
+
+    p {
+      padding-top: 10px;
+    }
+  }
+}
+
+.rules {
+  @include flex;
+  background-color: #f4f5f7;
+  width: 99.2vw;
+  height: max-content;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 392px);
+    gap: 158px;
+  }
+
+  &__item {
+    padding: 40px 0;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+  }
+
+  p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  @include onTablet {
+    &__inner {
+      grid-template-columns: repeat(2, 300px);
+      gap: 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  @include onTablet {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+      width: 342px;
+    }
+  }
+}
