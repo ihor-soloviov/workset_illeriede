@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import line from "../../assets/line.svg";
-import blur from "../../assets/blur.png";
+import mainPic from "../../assets/mainPic.webp";
 
 import "./Presentation.scss";
 
@@ -16,7 +16,7 @@ export const Presentation = () => (
 
     <div className="presentation-picture-block">
       <div className="picture-block">
-        <img src={blur} alt="main-picture" />
+        <img src={mainPic} alt="main-picture" />
       </div>
       <p>PV-Komponenten von Huawei</p>
     </div>

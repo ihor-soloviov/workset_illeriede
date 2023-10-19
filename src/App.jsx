@@ -13,7 +13,6 @@ export const App = () => {
     TagManager.initialize({ gtmId: "GTM-5K2S8JNN" });
 
     ReactPixel.pageView();
-
   }, []);
 
   useEffect(() => {
