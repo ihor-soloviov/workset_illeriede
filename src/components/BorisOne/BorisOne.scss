@@ -33,14 +33,25 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 150%;
-    margin-bottom: 24px;
+    
+    &:nth-of-type(2-n) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-photo {
+    background: url("../../assets/boris-one.jpeg") lightgray 0px -0.659px / 100%
+      113.981% no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 478px;
   }
 }
 
 @include onDesktop {
   .borisOne {
     flex-direction: row;
-  
+
     &-desktop {
       min-width: 50%;
       position: relative;
@@ -50,7 +61,6 @@
 
     &-inner {
       padding: 0px 100px;
-
     }
 
     &-name {

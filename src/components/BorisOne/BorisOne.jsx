@@ -1,14 +1,11 @@
 /* eslint-disable react/prop-types */
-import borisOne from "../../assets/boris-one.jpeg";
 import { Container } from "../Container";
 import "./BorisOne.scss";
 
 export const BorisOne = () => {
   return (
     <div className="borisOne">
-      <div className="boricOne-photo">
-        <img src={borisOne} alt="Boris photo" />
-      </div>
+      <div className="borisOne-photo"></div>
       {window.innerWidth > 1024 ? (
         <div className="borisOne-desktop">
           <div className="borisOne-inner">
@@ -18,25 +15,29 @@ export const BorisOne = () => {
             </div>
 
             <p>
-              Boris Jung bietet dir für nur kurze Zeit höchste Qualität zum
-              unschlagbaren Preis. Du erhältst eine komplette PV-Anlage, mit
-              professioneller Montage und maßgeschneiderter Projektierung. Im
-              Anschluss übernehmen wir die Netzanmeldung und das
-              Online-Monitoring deiner PV-Anlage.
+              Unsere Experten stehen bereit, um Illerrieden bei der Umstellung
+              auf Solarenergie zu unterstützen. Wir helfen Ihnen kostenlos,
+              unkompliziert und effizient bei der Auswahl der besten Solarlösung
+              für Ihr Zuhause und verwenden nur hochwertige Materialien von
+              führenden Herstellern. Mit WorkSET Energy erhalten Sie nicht nur
+              ein effizientes und langlebiges System, sondern auch den besten
+              Service und Unterstützung nach der Installation.
             </p>
 
             <p>
-              Mach bei der “PV-Sommeraktion” mit und unterstütze mit der WorkSET
-              Energy die Energiewende in Deutschland. Lass uns die kostenfreie
-              Sommersonne nutzen und deine Abhängigkeit von den Energiekonzernen
-              und den Strompreisen auf ein Minimum senken.
+              Die Rettung unseres Planeten ist unsere oberste Priorität, und wir
+              sind stolz darauf, dass unsere Solarsysteme das Leben unserer
+              Kunden grüner und nachhaltiger machen. Die Installation einer
+              Solaranlage auf Ihrem Haus spart nicht nur Geld, sondern schont
+              auch die Umwelt. WorkSET Energy ist bereit, Sie auf diesem Weg zu
+              begleiten und Ihr Zuhause umweltfreundlicher zu gestalten.
             </p>
 
             <p>
-              Wir expandieren stetig und kommen jetzt auch in deine Region. Die
-              WorkSET Energy freut sich, auch dich durch Professionalität, gute
-              Planung, freundliche Mitarbeiter und zügige Umsetzung zu
-              begeistern.
+              Kontaktieren Sie uns, um mehr darüber zu erfahren, wie die
+              Installation einer Solaranlage Ihnen und Ihrer Familie
+              zugutekommen kann. Gemeinsam gestalten wir eine nachhaltige
+              Zukunft für Illerrieden!
             </p>
           </div>
           <div className="redblock-inner">
@@ -56,25 +57,29 @@ export const BorisOne = () => {
             </div>
 
             <p>
-              Boris Jung bietet dir für nur kurze Zeit höchste Qualität zum
-              unschlagbaren Preis. Du erhältst eine komplette PV-Anlage, mit
-              professioneller Montage und maßgeschneiderter Projektierung. Im
-              Anschluss übernehmen wir die Netzanmeldung und das
-              Online-Monitoring deiner PV-Anlage.
+              Unsere Experten stehen bereit, um Illerrieden bei der Umstellung
+              auf Solarenergie zu unterstützen. Wir helfen Ihnen kostenlos,
+              unkompliziert und effizient bei der Auswahl der besten Solarlösung
+              für Ihr Zuhause und verwenden nur hochwertige Materialien von
+              führenden Herstellern. Mit WorkSET Energy erhalten Sie nicht nur
+              ein effizientes und langlebiges System, sondern auch den besten
+              Service und Unterstützung nach der Installation.
             </p>
 
             <p>
-              Mach bei der “PV-Sommeraktion” mit und unterstütze mit der WorkSET
-              Energy die Energiewende in Deutschland. Lass uns die kostenfreie
-              Sommersonne nutzen und deine Abhängigkeit von den Energiekonzernen
-              und den Strompreisen auf ein Minimum senken.
+              Die Rettung unseres Planeten ist unsere oberste Priorität, und wir
+              sind stolz darauf, dass unsere Solarsysteme das Leben unserer
+              Kunden grüner und nachhaltiger machen. Die Installation einer
+              Solaranlage auf Ihrem Haus spart nicht nur Geld, sondern schont
+              auch die Umwelt. WorkSET Energy ist bereit, Sie auf diesem Weg zu
+              begleiten und Ihr Zuhause umweltfreundlicher zu gestalten.
             </p>
 
             <p>
-              Wir expandieren stetig und kommen jetzt auch in deine Region. Die
-              WorkSET Energy freut sich, auch dich durch Professionalität, gute
-              Planung, freundliche Mitarbeiter und zügige Umsetzung zu
-              begeistern.
+              Kontaktieren Sie uns, um mehr darüber zu erfahren, wie die
+              Installation einer Solaranlage Ihnen und Ihrer Familie
+              zugutekommen kann. Gemeinsam gestalten wir eine nachhaltige
+              Zukunft für Illerrieden!
             </p>
           </div>
         </Container>
