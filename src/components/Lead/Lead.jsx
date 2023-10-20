@@ -8,8 +8,8 @@ import { FifthStep } from "./components/FifthStep";
 import { SixthStep } from "./components/SixthStep";
 import { SeventhStep } from "./components/SeventhStep";
 import { Done } from "./components/Done";
-import axios from "axios";
 import { Loader } from "./components/Loader";
+import { sendingData } from "./api/sendData";
 
 export const Lead = () => {
   const [step, setStep] = useState(1);
@@ -23,58 +23,15 @@ export const Lead = () => {
   const [loader, setLoader] = useState(false);
 
   useEffect(() => {
-    const sendingData = async () => {
-      if (userData !== null) {
-        try {
-          const JSONdata = JSON.stringify({
-            data: {
-              zweck,
-              energieverbrauch,
-              dachForm,
-              dachdatum,
-              verfugbare,
-              adresse,
-              userData,
-            },
-          });
-
-          const strapiApiRequest = axios.post(
-            "https://api.work-set.eu/api/lead-generators",
-            {
-              data: {
-                zweck,
-                energieverbrauch,
-                dachForm,
-                dachdatum,
-                verfugbare,
-                adresse,
-                userData,
-              },
-            }
-          );
-
-          const mailerApiRequest = axios.post(
-            "https://mailer.work-set.eu/lead",
-            JSONdata,
-            {
-              headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Content-Type": "application/json",
-              },
-            }
-          );
-
-          const [strapiResponse, mailerResponse] = await Promise.all([strapiApiRequest, mailerApiRequest]);
-
-          console.log("Strapi Response:", strapiResponse);
-          console.log("mailer Response:", mailerResponse);
-        } catch (error) {
-          console.log(error);
-        }
-      }
-    };
-
-    sendingData();
+    sendingData(
+      zweck,
+      energieverbrauch,
+      dachForm,
+      dachdatum,
+      verfugbare,
+      adresse,
+      userData
+    );
   }, [userData]);
 
   const switchComponent = () => {

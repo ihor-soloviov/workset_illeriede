@@ -8,6 +8,23 @@ export const fetchSliderPhotos = async () => {
 
     return response.data.data.attributes.unser_referenzen;
   } catch (error) {
-    console.log(error)
+    console.log(error);
+  }
+};
+
+export const fetchReviews = async (setReviews) => {
+  try {
+    const response = await axios.get(
+      "https://google-reviews.work-set.eu/getReviews",
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    setReviews(response.data.result.reviews);
+  } catch (error) {
+    console.error(error);
   }
 };
