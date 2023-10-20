@@ -16,7 +16,7 @@ export const PortfolioFeedback = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    // fetchReviews(setReviews);
+    // fetchReviews();
     setReviews(apiReviews);
   }, []);
 
@@ -105,7 +105,7 @@ export const PortfolioFeedback = () => {
               </SwiperSlide>
             ))}
         </Swiper>
-        <div style={{height: "20px"}} className="portfolio-feedback__dots" />
+        <div style={{height: "5px"}} className="portfolio-feedback__dots" />
       </div>
     </div>
   );

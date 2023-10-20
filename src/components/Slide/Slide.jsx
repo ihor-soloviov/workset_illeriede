@@ -5,7 +5,7 @@ import markerBlack from "../../assets/markerBlack.svg";
 import "./Slide.scss";
 
 export const Slide = React.memo(
-  ({ setIsZumOpened, title, list, text, images }) => {
+  ({ title, list, text, images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [autoSlideIntervalId, setAutoSlideIntervalId] = useState(null);
 
@@ -69,12 +69,6 @@ export const Slide = React.memo(
                 ))}
               </div>
 
-              <button
-                onClick={() => setIsZumOpened(true)}
-                className="slide-button"
-              >
-                zum Angebot
-              </button>
             </div>
           </div>
         )}

@@ -12,7 +12,7 @@ export const fetchSliderPhotos = async () => {
   }
 };
 
-export const fetchReviews = async (setReviews) => {
+export const fetchReviews = async () => {
   try {
     const response = await axios.get(
       "https://google-reviews.work-set.eu/getReviews",
@@ -23,7 +23,7 @@ export const fetchReviews = async (setReviews) => {
         },
       }
     );
-    setReviews(response.data.result.reviews);
+    return response.data.result.reviews;
   } catch (error) {
     console.error(error);
   }

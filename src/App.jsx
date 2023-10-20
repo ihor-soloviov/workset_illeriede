@@ -42,6 +42,7 @@ export const App = () => {
       <Components.BorisOne />
       {window.innerWidth < 1024 && <Components.RedBlock />}
       <Components.PortfolioSlider setIsZumOpened={setIsZumOpened} />
+      <Components.VideoSlider/>
       <Components.PortfolioFeedback />
       <Components.Lead />
       <Components.BorisTwo />

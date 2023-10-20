@@ -1,20 +1,18 @@
 /* eslint-disable react/prop-types */
-import { useCallback, useEffect, useRef, useState } from "react";
-import { Container } from "../Container";
+import { useCallback, useEffect, useState } from "react";
 import { Slide } from "../Slide";
 import { fetchSliderPhotos } from "../../../utils/dataLoader";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { SwiperSlide } from "swiper/react";
+import { SliderContainer } from "../SliderContainer/SliderContainer";
 
 import "swiper/scss";
 import "swiper/scss/pagination";
 
 import "./PortfolioSlider.scss";
 
-export const PortfolioSlider = ({setIsZumOpened}) => {
+export const PortfolioSlider = ({ setIsZumOpened }) => {
   const [content, setContent] = useState(null);
-  const swiperRef = useRef();
 
   const getData = useCallback(async () => {
     const response = await fetchSliderPhotos();
@@ -27,26 +25,7 @@ export const PortfolioSlider = ({setIsZumOpened}) => {
 
   return (
     <div className="portfolioSlider">
-      <Container>
-        <h2>Unsere Referenzen</h2>
-      </Container>
-
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        direction={"horizontal"}
-        slidesPerView={1}
-        pagination={{
-          clickable: true,
-          el: ".swiper-pagination",
-        }}
-        speed={400}
-        loop={true}
-        // autoplay={{ delay: 8000 }}
-        onBeforeInit={(swiper) => {
-          swiperRef.current = swiper;
-        }}
-        className="mySwiper"
-      >
+      <SliderContainer>
         {content &&
           content.map((slide) => {
             const { id, text, list, inner_slider, title } = slide;
@@ -54,15 +33,17 @@ export const PortfolioSlider = ({setIsZumOpened}) => {
 
             return (
               <SwiperSlide key={id}>
-                <Slide setIsZumOpened={setIsZumOpened} text={text} list={list} images={images} title={title} />
+                <Slide
+                  setIsZumOpened={setIsZumOpened}
+                  text={text}
+                  list={list}
+                  images={images}
+                  title={title}
+                />
               </SwiperSlide>
             );
           })}
-      </Swiper>
-      <Container>
-        <div style={{ height: "20px" }} className="swiper-pagination"></div>
-      </Container>
-      
+      </SliderContainer>
     </div>
   );
 };
