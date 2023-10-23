@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import ButtonArrow from "../Buttons/ButtonArrow";
-import Rating from "./Rating";
+import { ButtonArrow } from "../Buttons/ButtonArrow";
+import { Rating } from "./Rating";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 // import { fetchReviews } from "../../../utils/dataLoader";
@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 export const PortfolioFeedback = () => {
-  const containerRef = useRef(null);
+  // const containerRef = useRef(null);
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
@@ -20,11 +20,11 @@ export const PortfolioFeedback = () => {
     setReviews(apiReviews);
   }, []);
 
-  const swiperRef = useRef();
+  const portfolioRef = useRef(null);
 
   return (
     <div className="portfolio-feedback">
-      <div className="container" ref={containerRef}>
+      <div className="container">
         <div className="portfolio-feedback__header">
           <h3>
             Feedback unserer <br /> Kunden
@@ -35,13 +35,13 @@ export const PortfolioFeedback = () => {
                 size={"small"}
                 direction={"left"}
                 color={"outline-black"}
-                onClick={() => swiperRef.current?.slidePrev()}
+                onClick={() => portfolioRef.current?.slidePrev()}
               />
               <ButtonArrow
                 size={"small"}
                 direction={"right"}
                 color={"outline-black"}
-                onClick={() => swiperRef.current?.slideNext()}
+                onClick={() => portfolioRef.current?.slideNext()}
               />
             </div>
           )}
@@ -55,15 +55,16 @@ export const PortfolioFeedback = () => {
           spaceBetween={36}
           speed={400}
           loop={true}
+          autoplay={{ delay: 6000 }}
           grabCursor={true}
           pagination={{ clickable: true, el: ".portfolio-feedback__dots" }}
           onBeforeInit={(swiper) => {
-            swiperRef.current = swiper;
+            portfolioRef.current = swiper;
           }}
         >
           {reviews &&
-            reviews.map((review, index) => (
-              <SwiperSlide key={index}>
+            reviews.map((review) => (
+              <SwiperSlide key={review.author_name}>
                 <div className="feedback">
                   <div className="feedback-item">
                     {window.innerWidth < 1024 ? (
@@ -79,7 +80,10 @@ export const PortfolioFeedback = () => {
                           </div>
                         </div>
                         <div className="rating">
-                          <Rating rating={review.rating} />
+                          <Rating
+                            index={review.author_name}
+                            rating={review.rating}
+                          />
                           <p>{review.relative_time_description}</p>
                         </div>
                       </React.Fragment>
@@ -93,7 +97,10 @@ export const PortfolioFeedback = () => {
                         <div className="head__name">
                           <h4>{review.author_name}</h4>
                           <div className="rating">
-                            <Rating rating={review.rating} />
+                            <Rating
+                              index={review.author_name}
+                              rating={review.rating}
+                            />
                             <p>{review.relative_time_description}</p>
                           </div>
                         </div>
@@ -105,7 +112,7 @@ export const PortfolioFeedback = () => {
               </SwiperSlide>
             ))}
         </Swiper>
-        <div style={{height: "5px"}} className="portfolio-feedback__dots" />
+        <div style={{ height: "5px" }} className="portfolio-feedback__dots" />
       </div>
     </div>
   );

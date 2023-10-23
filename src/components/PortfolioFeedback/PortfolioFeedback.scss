@@ -5,6 +5,7 @@
   .container {
     display: flex;
     align-items: start;
+    margin-bottom: 10px;
   }
   &__header {
     font-size: 22px;
@@ -13,7 +14,7 @@
 
   &__items {
     background-color: $bg-grey;
-    padding: 48px 0 64px;
+    padding: 0 0 64px;
 
   }
 
@@ -92,3 +93,7 @@
   }
 }
 
+.star-wrapper {
+  display: flex;
+  width: max-content;
+}

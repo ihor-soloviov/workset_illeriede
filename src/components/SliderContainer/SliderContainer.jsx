@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { useRef } from "react";
 import { Container } from "../Container";
 
 import { Swiper } from "swiper/react";
@@ -9,12 +8,17 @@ import "swiper/scss";
 import "swiper/scss/pagination";
 import "./SliderContainer.scss";
 
-export const SliderContainer = ({ children }) => {
-  const swiperRef = useRef(null);
+export const SliderContainer = ({
+  swiperRef,
+  children,
+  timer,
+  pagination,
+  headerText
+}) => {
   return (
     <div className="sliderContainer">
       <Container>
-        <h2>Unsere Referenzen</h2>
+        <h2>{headerText}</h2>
       </Container>
 
       <Swiper
@@ -23,11 +27,11 @@ export const SliderContainer = ({ children }) => {
         slidesPerView={1}
         pagination={{
           clickable: true,
-          el: ".swiper-pagination",
+          el: `.${pagination}`,
         }}
         speed={400}
         loop={true}
-        // autoplay={{ delay: 8000 }}
+        autoplay={{ delay: timer }}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -35,7 +39,7 @@ export const SliderContainer = ({ children }) => {
       >
         {children}
       </Swiper>
-        <div className="swiper-pagination"></div>
+      <div className={`${pagination}`}></div>
     </div>
   );
 };

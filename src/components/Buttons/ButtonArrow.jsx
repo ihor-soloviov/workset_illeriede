@@ -1,6 +1,5 @@
-import React from "react";
-
-const ButtonArrow = (props) => {
+/* eslint-disable react/prop-types */
+export const ButtonArrow = (props) => {
   return (
     <button
       onClick={props.onClick}
@@ -23,5 +22,3 @@ const ButtonArrow = (props) => {
     </button>
   );
 };
-
-export default ButtonArrow;

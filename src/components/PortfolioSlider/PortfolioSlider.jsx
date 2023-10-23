@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Slide } from "../Slide";
 import { fetchSliderPhotos } from "../../../utils/dataLoader";
 
@@ -11,8 +11,9 @@ import "swiper/scss/pagination";
 
 import "./PortfolioSlider.scss";
 
-export const PortfolioSlider = ({ setIsZumOpened }) => {
+export const PortfolioSlider = () => {
   const [content, setContent] = useState(null);
+  const swiperRef = useRef(null);
 
   const getData = useCallback(async () => {
     const response = await fetchSliderPhotos();
@@ -25,7 +26,13 @@ export const PortfolioSlider = ({ setIsZumOpened }) => {
 
   return (
     <div className="portfolioSlider">
-      <SliderContainer>
+      <SliderContainer
+        timer={8000}
+        swiperRef={swiperRef}
+        pagination={"swiper-pagination"}
+        setCurrentSlider={()=> {return}}
+        headerText={"Unsere Referenzen"}
+      >
         {content &&
           content.map((slide) => {
             const { id, text, list, inner_slider, title } = slide;
@@ -33,13 +40,7 @@ export const PortfolioSlider = ({ setIsZumOpened }) => {
 
             return (
               <SwiperSlide key={id}>
-                <Slide
-                  setIsZumOpened={setIsZumOpened}
-                  text={text}
-                  list={list}
-                  images={images}
-                  title={title}
-                />
+                <Slide text={text} list={list} images={images} title={title} />
               </SwiperSlide>
             );
           })}
