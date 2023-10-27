@@ -11,10 +11,8 @@ export const SixthStep = ({ setStep, setAdresse, setLoader }) => {
   const formItems = ["PLZ", "Ort", "Straße", "Hausnummer"];
 
   const handleAddresse = (value) => {
-    window.scrollTo({
-      top: 4755,
-      behavior: "smooth",
-    });
+    const target = document.getElementById("top");
+    target.scrollIntoView({ behavior: "smooth" });
     setLoader(true);
 
     setTimeout(() => {
@@ -24,9 +22,10 @@ export const SixthStep = ({ setStep, setAdresse, setLoader }) => {
       setStep(7);
     }, 3500);
   };
+
   return (
     <>
-      <div className={classNames("seventhStep", { "slide-enter": !isVisible })}>
+      <div id="top" className={classNames("seventhStep", { "slide-enter": !isVisible })}>
         <Progress second="true" />
         <div className="seventhStep__header">
           <h1>Wo ist das PV-Projekt geplant?</h1>

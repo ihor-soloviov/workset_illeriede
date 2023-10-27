@@ -4,6 +4,7 @@ export { CookiesModal } from "../components/CookiesModal";
 export { RedBlock } from "../components/RedBlock";
 export { Lead } from "../components/Lead";
 export { BorisTwo } from "../components/BorisTwo";
+export { EricTwo } from "../components/EricTwo";
 export { Benefits } from "../components/Benefits";
 export { Procents } from "../components/Procents";
 export { PortfolioSlider } from "../components/PortfolioSlider";

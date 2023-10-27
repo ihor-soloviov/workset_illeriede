@@ -18,10 +18,8 @@ export const SeventhStep = ({ setUserData, setStep }) => {
   const formItems = ["Vorname", "Nachname", "E-Mail Adresse", "Telefonnummer"];
 
   const handleUserData = (value) => {
-    window.scrollTo({
-      top: 4755,
-      behavior: "smooth",
-    });
+    const target = document.getElementById("top2");
+    target.scrollIntoView({ behavior: "smooth" });
     
     useAnalyticsEventTracker()
 
@@ -84,7 +82,7 @@ export const SeventhStep = ({ setUserData, setStep }) => {
   }, []);
 
   return (
-    <section style={{ display: "flex", flexDirection: "column" }}>
+    <section id="top2" style={{ display: "flex", flexDirection: "column" }}>
       <div
         className={classNames("eighthStep", {
           shown: enable,

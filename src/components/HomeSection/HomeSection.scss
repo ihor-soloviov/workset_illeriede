@@ -14,7 +14,7 @@
     display: flex;
     justify-content: start;
     width: 100%;
-    padding: 28px 0;
+    padding: 28px 0 28px 24px;
     margin-bottom: 25px;
   }
 
@@ -124,10 +124,14 @@
 @include onDesktop {
   .homeSection {
     height: max-content;
+    flex-direction: row;
+    justify-content: start;
 
     &-header {
+      position: absolute;
+      top: -10%;
       justify-content: flex-start;
-      padding: 24px 0 0 48px;
+      padding: 47px 0 0 48px;
       margin-bottom: 0;
 
       img {
@@ -136,10 +140,43 @@
       }
     }
 
+    .container {
+      flex-grow: 1;
+      min-width: 874px;
+      position: relative;
+    }
+
+    &__location {
+      min-width: 854px;
+      height: 972px;
+      padding-top: 392px;
+    }
+
+    .location {
+      img {
+        width: 52px;
+        height: 52px;
+      }
+
+      p {
+        font-size: 54px;
+      }
+    }
+
+    .location-header {
+      font-size: 28px;
+    }
+
+    .location-scroll {
+      p {
+        font-size: 20px;
+      }
+    }
+
     h1 {
-      font-size: 64px;
-      line-height: 140%;
+      font-size: 36px;
       margin-bottom: 10px;
+      margin-top: 41px;
     }
 
     span {

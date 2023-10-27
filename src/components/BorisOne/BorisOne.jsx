@@ -43,7 +43,7 @@ export const BorisOne = () => {
           <div className="redblock-inner">
             <div className="redBlock">
               <h4>
-                Gültig bis 30.09.2023 <br /> Sicher dir jetzt dein Angebot!
+              Sicher dir jetzt dein Angebot!
               </h4>
             </div>
           </div>

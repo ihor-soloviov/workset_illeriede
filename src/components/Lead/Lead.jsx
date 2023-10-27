@@ -83,7 +83,7 @@ export const Lead = () => {
   };
 
   return (
-    <div className="lead">
+    <div className="lead" id="lead">
       <div className="lead-container">{switchComponent()}</div>
       {loader && <Loader />}
     </div>

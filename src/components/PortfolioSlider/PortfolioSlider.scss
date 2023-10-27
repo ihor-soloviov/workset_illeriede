@@ -32,6 +32,7 @@
 
 @include onDesktop {
   .portfolioSlider {
+    padding-top: 80px;
     position: relative;
     .container {
 
@@ -39,10 +40,11 @@
       max-width: 1494px;
       margin: 0 auto;
       align-items: start;
+      
 
       h2 {
         font-size: 32px;
-        margin-bottom: 64px;
+        margin-bottom: 32px;
       }
     }
   }

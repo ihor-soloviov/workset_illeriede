@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ButtonArrow } from "../Buttons/ButtonArrow";
 import { Rating } from "./Rating";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { FreeMode, Navigation, Pagination } from "swiper/modules";
 // import { fetchReviews } from "../../../utils/dataLoader";
 import apiReviews from "./reviews.json";
 import "./PortfolioFeedback.scss";
@@ -26,10 +25,8 @@ export const PortfolioFeedback = () => {
     <div className="portfolio-feedback">
       <div className="container">
         <div className="portfolio-feedback__header">
-          <h3>
-            Feedback unserer <br /> Kunden
-          </h3>
-          {window.innerWidth > 1024 && (
+          <h3>Feedback unserer {window.innerWidth < 1024 && <br />} Kunden</h3>
+          {/*          {window.innerWidth > 1024 && (
             <div className="portfolio-feedback__header--buttons">
               <ButtonArrow
                 size={"small"}
@@ -44,14 +41,15 @@ export const PortfolioFeedback = () => {
                 onClick={() => portfolioRef.current?.slideNext()}
               />
             </div>
-          )}
+          )} */}
         </div>
       </div>
       <div className="portfolio-feedback__items">
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, FreeMode]}
           direction={"horizontal"}
-          slidesPerView={window.innerWidth > 1024 ? 3 : 1}
+          slidesPerView={"auto"}
+          freeMode={true}
           spaceBetween={36}
           speed={400}
           loop={true}
@@ -84,7 +82,9 @@ export const PortfolioFeedback = () => {
                             index={review.author_name}
                             rating={review.rating}
                           />
-                          <p>{review.relative_time_description}</p>
+                          <p className="data">
+                            {review.relative_time_description}
+                          </p>
                         </div>
                       </React.Fragment>
                     ) : (
@@ -101,9 +101,11 @@ export const PortfolioFeedback = () => {
                               index={review.author_name}
                               rating={review.rating}
                             />
-                            <p>{review.relative_time_description}</p>
                           </div>
                         </div>
+                        <p className="data">
+                          {review.relative_time_description}
+                        </p>
                       </div>
                     )}
                     <div className="feedback-item__text">{review.text}</div>

@@ -128,3 +128,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+html {
+  font-size: calc(100vw / 1728 * 10);
+  scroll-behavior: smooth;
+
+  @include onMobile {
+    font-size: calc(100vw / 390 * 10);
+  }
+}

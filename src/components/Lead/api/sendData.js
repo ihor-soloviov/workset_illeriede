@@ -20,6 +20,7 @@ export const sendingData = async (
           verfugbare,
           adresse,
           userData,
+          heirkunft: "Illereiden",
         },
       });
 
@@ -38,7 +39,7 @@ export const sendingData = async (
         }
       );
 
-      const mailerApiRequest = axios.post(
+      const mailerApiRequest = await axios.post(
         "https://mailer.work-set.eu/lead",
         JSONdata,
         {

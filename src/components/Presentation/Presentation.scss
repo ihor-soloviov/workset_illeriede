@@ -15,7 +15,7 @@
 
     .happy-hack {
       position: absolute;
-      background: linear-gradient(147deg, #ebedee -2.77%, #fff 93.51%);
+      background: linear-gradient(147deg,#ebedee  -2.77%, #fff 93.51%);
       top: 52px;
       z-index: 2;
       height: 30px;
@@ -93,25 +93,25 @@
     height: auto;
 
     &-benefit {
-      padding: 5px 16px;
+      padding: 9px 14px;
       margin-bottom: -10px;
-      font-size: 24px;
+      font-size: 18px;
       letter-spacing: 0.5px;
     }
 
     .benefit-line {
-      top: 68px;
+      top: 61px;
     }
 
     .happy-hack {
-      top: 68px;
+      top: 61px;
 
     }
 
     &-picture-block {
       .picture-block {
-        width: 852px;
-        height: 730px;
+        width: 580px;
+        height: 505;
         overflow: hidden;
 
         img {
@@ -120,7 +120,8 @@
       }
 
       p {
-        font-size: 24px;
+        padding: 8px 12px;
+        font-size: 20px;
       }
     }
   }

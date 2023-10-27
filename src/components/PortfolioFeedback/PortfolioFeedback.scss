@@ -15,7 +15,6 @@
   &__items {
     background-color: $bg-grey;
     padding: 0 0 64px;
-
   }
 
   .swiper-slide {
@@ -74,13 +73,13 @@
       align-items: center;
       gap: 12px;
       margin-bottom: 36px;
+    }
 
-      p {
+    .data {
         font-size: 12px;
         font-weight: 500;
         line-height: 22px;
         letter-spacing: 0.3px;
-      }
     }
 
     &__text {
@@ -96,4 +95,42 @@
 .star-wrapper {
   display: flex;
   width: max-content;
+}
+
+@include onDesktop {
+  .portfolio-feedback {
+    .container {
+      margin: 0 117px;
+    }
+    &__header {
+      font-size: 36px;
+      font-weight: 600;
+      width: max-content;
+    }
+    .swiper-slide {
+      width: 596px;
+    }
+
+    .swiper-wrapper {
+      margin-left: 40px;
+    }
+
+    .feedback {
+      &-item {
+        &__head {
+          h4 {
+            width: max-content;
+          }
+        }
+      }
+    }
+    
+  }
+
+  .feedback-item {
+    .data {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  }
 }

@@ -1,5 +1,11 @@
 @import "./colors.scss";
 
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin onTablet {
   @media (max-width: 1200px) {
     @content;
