@@ -4,11 +4,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 342px;
+  width: 34.2rem;
   margin: 0 auto;
   position: relative;
 
   @include onDesktop {
-    min-width: 810px
+    min-width: 81rem
   }
 }

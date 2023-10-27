@@ -3,19 +3,19 @@
 
 .videoSlider {
   width: 100%;
-  margin-bottom: 110px;
+  margin-bottom: 11rem;
 }
 
 .videoSlide {
   &-inner {
     margin: 0 auto;
-    width: calc(100% - 48px);
+    width: calc(100% - 4.8rem);
   }
 }
 
 .youTube__block {
-  width: 340px;
-  height: 216px;
+  width: 100%;
+  height: 21.6rem;
   position: relative;
 }
 
@@ -32,7 +32,7 @@
 
 .videoPagination {
   width: 100%;
-  bottom: -24px !important;
+  bottom: -2.4rem !important;
   display: flex;
   justify-content: center;
 }
@@ -40,21 +40,21 @@
 @include onDesktop {
   .sliderContainer {
     h2 {
-      font-size: 36px;
-      margin-bottom: 48px;
+      font-size: 3.6rem;
+      margin-bottom: 4.8rem;
     }
   }
 
   .videoSlide {
     &-inner {
       margin: 0 auto;
-      width: 980px;
+      width: 98rem;
     }
   }
 
   .youTube__block {
     width: 100%;
-    height: 600px;
+    height: 60rem;
     position: relative;
   }
   

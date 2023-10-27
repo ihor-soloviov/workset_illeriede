@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import markerBlack from "../../assets/markerBlack.svg";
 import "./Slide.scss";
 

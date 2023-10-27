@@ -30,7 +30,9 @@ export const PortfolioSlider = () => {
         timer={8000}
         swiperRef={swiperRef}
         pagination={"swiper-pagination"}
-        setCurrentSlider={()=> {return}}
+        setCurrentSlider={() => {
+          return;
+        }}
         headerText={"Unsere Referenzen"}
       >
         {content &&

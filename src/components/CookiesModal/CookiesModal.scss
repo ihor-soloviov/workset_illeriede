@@ -1,5 +1,5 @@
-@import "../../../utilsScss/mixins.scss";
 @import "../../../utilsScss/colors.scss";
+@import "../../../utilsScss/mixins.scss";
 
 .cookiesModal {
   position: absolute;
@@ -8,20 +8,25 @@
   flex-direction: column;
   align-items: center;
 
-  height: 1500px;
-  width: 100vw;
+  height: 150rem;
+  width: 100%;
   background: rgba(217, 207, 207, 0.8); 
   backdrop-filter: blur(8px);
 
   &-inner {
-    margin-top: 70px;
-    padding: 32px 0 64px;
+    margin-top: 7rem;
+    padding: 3.2rem 2.4rem 6.4rem;
     background-color: #fff;
     border-radius: 4px;
-    width: 390px;
+    width: 39rem;
 
     .container {
-      min-width: 342px;
+      min-width: 34.2rem;
+    }
+    @include onDesktop {
+      margin-top: 2rem;
+      padding: 6.4rem 4.8rem 12.8rem;
+      width: 58rem;
     }
   }
 
@@ -32,39 +37,53 @@
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
     line-height: 140%;
-    margin-bottom: 18px;
+    margin-bottom: 1.8rem;
+
+    @include onDesktop {
+      font-size: 2.4rem;
+    }
   }
 
   p {
     color: #333;
     text-align: center;
-    font-family: Metropolis;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 156%;
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
+
+    @include onDesktop {
+      font-size: 2rem;
+    }
   }
 
   &-links {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 36px;
+    margin-bottom: 3.6rem;
     width: 97%;
 
     a {
-      font-size: 14px;
+      font-size: 1.4rem;
       font-weight: 400;
       line-height: 140%; /* 19.6px */
       text-decoration-line: underline;
+
+      @include onDesktop {
+        font-size: 2rem;
+      }
     }
   }
 
   &-dropdown__items {
     width: 97%;
-    margin-bottom: 64px;
+    margin-bottom: 6.4rem;
+    @include onDesktop {
+      font-size: 2rem;
+    }
   }
 
   &-dropdown__item {
@@ -72,11 +91,11 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 
     .dropdown-left {
       img {
-        padding-right: 10px;
+        padding-right: 1rem;
       }
     }
   }
@@ -87,20 +106,20 @@
 
   .dropdown__text--opened {
     display: block;
-    margin-top: 14px;
+    margin-top: 1.4rem;
     width: 95%;
-    padding-left: 20px;
+    padding-left: 2rem;
   }
 
   &-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 24px 18px;
+    gap: 2.4rem 1.8rem;
     grid-template-areas:
       "green-btn green-btn"
       "left-btn right-btn";
-    height: 104px;
+    height: 10.4rem;
     width: 100%;
 
     .green-btn {
@@ -108,7 +127,7 @@
       background-color: #56c568;
       color: #fff;
       border-radius: 4px;
-      font-size: 14px;
+      font-size: 1.4rem;
       font-weight: 600;
       line-height: 20px;
       letter-spacing: 0.35px;
@@ -119,6 +138,10 @@
 
       &:active {
         background-color: #379246;
+      }
+
+            @include onDesktop {
+        font-size: 2rem;
       }
     }
     .left-btn {
@@ -132,9 +155,9 @@
       border: 3px solid $main-black;
       border-radius: 4px;
       color: $main-black;
-      font-size: 14px;
+      font-size: 1.4rem;
       font-weight: 600;
-      line-height: 20px;
+      line-height: 2rem;
       letter-spacing: 0.35px;
 
       &:hover {

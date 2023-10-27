@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
 import { Container } from "../Container";
-import "./BorisOne.scss";
+import "./PersoneOne.scss";
 
-export const BorisOne = () => {
+export const PersoneOne = () => {
   return (
-    <div className="borisOne">
-      <div className="borisOne-photo"></div>
+    <div className="personeOne">
+      <div className="personeOne-photo"></div>
       {window.innerWidth > 1024 ? (
-        <div className="borisOne-desktop">
-          <div className="borisOne-inner">
-            <div className="borisOne-name">
+        <div className="personeOne-desktop">
+          <div className="personeOne-inner">
+            <div className="personeOne-name">
               <h2>Boris Jung</h2>
               <h4>Gründer der WorkSET Energy</h4>
             </div>
@@ -50,8 +50,8 @@ export const BorisOne = () => {
         </div>
       ) : (
         <Container>
-          <div className="borisOne-inner">
-            <div className="borisOne-name">
+          <div className="personeOne-inner">
+            <div className="personeOne-name">
               <h2>Boris Jung</h2>
               <h4>Gründer der WorkSET Energy</h4>
             </div>

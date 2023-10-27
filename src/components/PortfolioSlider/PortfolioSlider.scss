@@ -2,28 +2,28 @@
 @import "../../../utilsScss/colors.scss";
 
 .portfolioSlider {
-  margin-bottom: 112px;
+  margin-bottom: 11.2rem;
 
   h2 {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 600;
-    line-height: 40px;
-    margin-top: 48px;
-    margin-bottom: 16px;
+    line-height: 4rem;
+    margin-top: 4.8rem;
+    margin-bottom: 1.6rem;
   }
 }
 
 .mySwiper {
   height: max-content !important;
-  margin-bottom: 40px;
-  padding-bottom: 24px !important;
+  margin-bottom: 4rem;
+  padding-bottom: 2.4rem !important;
 
 }
 
 .swiper-slide {
   display: flex;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.8rem;
   background: inherit;
   justify-content: center;
   align-items: center;
@@ -32,25 +32,25 @@
 
 @include onDesktop {
   .portfolioSlider {
-    padding-top: 80px;
+    padding-top: 8rem;
     position: relative;
     .container {
 
-      width: calc(100% - 234px);
-      max-width: 1494px;
+      width: calc(100% - 23.4rem);
+      max-width: 149.4rem;
       margin: 0 auto;
       align-items: start;
       
 
       h2 {
-        font-size: 32px;
-        margin-bottom: 32px;
+        font-size: 3.2rem;
+        margin-bottom: 3.2rem;
       }
     }
   }
   .mySwiper {
     margin: 0 auto; 
-    max-width: 1728px;
+    max-width: 172.8rem;
   }
 
   .swiper-slide {

@@ -16,7 +16,13 @@ export const HomeSection = () => {
     target.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="homeSection">
+    <m.div
+      initial="hidden"
+      whileInView="visible"
+      variants={opacityAnimation}
+      viewport={{ once: true }}
+      className="homeSection"
+    >
       {window.innerWidth < 1024 && (
         <div className="homeSection-header">
           <div className="header-logo">
@@ -59,6 +65,6 @@ export const HomeSection = () => {
           <LazyLoadImage src={arrow} alt="arow icon" />
         </m.button>
       </div>
-    </div>
+    </m.div>
   );
 };

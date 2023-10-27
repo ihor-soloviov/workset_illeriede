@@ -9,25 +9,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px;
+    padding: 2.4rem;
 
     p {
-      line-height: 36px;
-      padding-bottom: 4px;
+      line-height: 3.6rem;
+      padding-bottom: 0.4rem;
     }
 
     a {
-      line-height: 36px;
-      padding-bottom: 4px;
+      line-height: 3.6rem;
+      padding-bottom: 0.4rem;
     }
   }
 }
 
 @include onDesktop {
   .footer {
+    font-size: 1.6rem;
     &-inner {
       flex-direction: row;
-      gap: 42px;
+      gap: 4.2rem;
     }
   }
 }

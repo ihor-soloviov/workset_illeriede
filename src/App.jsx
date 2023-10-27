@@ -4,6 +4,7 @@ import * as Components from "./utils/Imports.js";
 import ReactPixel from "react-facebook-pixel";
 import TagManager from "react-gtm-module";
 import { LazyMotion, domAnimation } from "framer-motion";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 export const App = () => {
   const [isCookiesShown, setIsCookiesShown] = useState(false);
@@ -42,11 +43,15 @@ export const App = () => {
       <LazyMotion features={domAnimation}>
         <Components.HomeSection />
       </LazyMotion>
-      <Components.BorisOne />
+      <Components.PersoneOne />
       {window.innerWidth < 1024 && <Components.RedBlock />}
-      <Components.PortfolioSlider setIsZumOpened={setIsZumOpened} />
+      <LazyLoadComponent>
+        <Components.PortfolioSlider setIsZumOpened={setIsZumOpened} />
+      </LazyLoadComponent>
       <Components.VideoSlider />
-      <Components.PortfolioFeedback />
+      <LazyLoadComponent>
+        <Components.PortfolioFeedback />
+      </LazyLoadComponent>
       <Components.Lead />
       <LazyMotion features={domAnimation}>
         <Components.EricTwo amount="0.2" />

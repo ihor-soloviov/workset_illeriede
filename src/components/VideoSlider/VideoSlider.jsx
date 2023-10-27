@@ -1,12 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
+import videoCodes from "./api.json";
 import { SliderContainer } from "../SliderContainer/SliderContainer";
 import { VideoSlide } from "./VideoSlide";
-import videoCodes from "./api.json";
-import "./VideoSlider.scss";
 import { SwiperSlide } from "swiper/react";
-// import { SwiperSlide } from "swiper/react";
-// import { Slide } from "../Slide";
+import "./VideoSlider.scss";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 export const VideoSlider = () => {
   const [videos, setVideos] = useState(null);
@@ -14,11 +13,6 @@ export const VideoSlider = () => {
   useEffect(() => {
     setVideos(videoCodes);
   }, []);
-
-  // const currentSlideHandler = (ref) => {
-  //   setCurrentSlider(ref?.current?.activeIndex);
-  //   console.log("slide change", ref?.current?.activeIndex);
-  // };
 
   return (
     <div className="videoSlider">
@@ -34,7 +28,9 @@ export const VideoSlider = () => {
 
             return (
               <SwiperSlide key={id}>
-                <VideoSlide video_code={video_code} />
+                <LazyLoadComponent>
+                  <VideoSlide video_code={video_code} />
+                </LazyLoadComponent>
               </SwiperSlide>
             );
           })}

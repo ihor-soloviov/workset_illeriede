@@ -32,21 +32,21 @@
 
 @include onDesktop {
   .procents {
-    margin-bottom: 150px;
+    margin-bottom: 15rem;
     .container {
       flex-direction: row;
       justify-content: space-between;
-      gap: 20px;
+      gap: 2rem;
       width: 100%;
-      padding: 0 48px;
+      padding: 0 4.8rem;
     }
 
     &-item {
-      border: 1px solid #d3ddeb;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15); 
       width: 100%;
 
       h2 {
-        padding-top: 100px;
+        padding-top: 10rem;
       }
     }
   }

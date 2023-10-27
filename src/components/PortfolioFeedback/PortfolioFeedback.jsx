@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Rating } from "./Rating";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
 // import { fetchReviews } from "../../../utils/dataLoader";
 import apiReviews from "./reviews.json";
 import "./PortfolioFeedback.scss";
@@ -9,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { videoSwiperSettings } from "../../utils/swiperSettings";
 
 export const PortfolioFeedback = () => {
   // const containerRef = useRef(null);
@@ -46,16 +46,7 @@ export const PortfolioFeedback = () => {
       </div>
       <div className="portfolio-feedback__items">
         <Swiper
-          modules={[Navigation, Pagination, FreeMode]}
-          direction={"horizontal"}
-          slidesPerView={"auto"}
-          freeMode={true}
-          spaceBetween={36}
-          speed={400}
-          loop={true}
-          autoplay={{ delay: 6000 }}
-          grabCursor={true}
-          pagination={{ clickable: true, el: ".portfolio-feedback__dots" }}
+          {...videoSwiperSettings}
           onBeforeInit={(swiper) => {
             portfolioRef.current = swiper;
           }}

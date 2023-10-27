@@ -3,10 +3,10 @@
 
 .presentation {
   color: #fff;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
-  margin-bottom: 60px;
-  height: 450px;
+  margin-bottom: 6rem;
+  height: 45rem;
 
   &-item {
     display: flex;
@@ -16,27 +16,27 @@
     .happy-hack {
       position: absolute;
       background: linear-gradient(147deg,#ebedee  -2.77%, #fff 93.51%);
-      top: 52px;
+      top: 5.2rem;
       z-index: 2;
-      height: 30px;
-      width: 6px;
+      height: 3rem;
+      width: 0.6rem;
       animation: line 0.3s linear 0.5s 1 normal forwards;
     }
 
     @keyframes line {
       0% {
-        height: 30px;
+        height: 3rem;
       }
 
       100% {
-        height: 0px;
+        height: 0rem;
       }
     }
 
     .benefit-line {
       position: absolute;
-      z-index: 3px;
-      top: 52px;
+      z-index: 3;
+      top: 5.2rem;
     }
   }
 
@@ -45,10 +45,10 @@
 
     width: max-content;
     height: max-content;
-    padding: 8px 30px;
-    margin-bottom: 19px;
+    padding: 0.8rem 3rem;
+    margin-bottom: 1.9rem;
 
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 120%;
     letter-spacing: 1.05px;
     text-align: center;
@@ -64,7 +64,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 2.4rem;
 
     p {
       background-color: $main-red;
@@ -93,24 +93,24 @@
     height: auto;
 
     &-benefit {
-      padding: 9px 14px;
-      margin-bottom: -10px;
-      font-size: 18px;
+      padding: 0.9rem 1.4rem;
+      margin-bottom: -1rem;
+      font-size: 1.8rem;
       letter-spacing: 0.5px;
     }
 
     .benefit-line {
-      top: 61px;
+      top: 6.1rem;
     }
 
     .happy-hack {
-      top: 61px;
+      top: 6.1rem;
 
     }
 
     &-picture-block {
       .picture-block {
-        width: 580px;
+        width: 58rem;
         height: 505;
         overflow: hidden;
 
@@ -120,8 +120,8 @@
       }
 
       p {
-        padding: 8px 12px;
-        font-size: 20px;
+        padding: 0.8rem 1.2rem;
+        font-size: 2rem;
       }
     }
   }
