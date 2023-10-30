@@ -1,7 +1,7 @@
 @import "../../../utilsScss/mixins.scss";
 @import "../../../utilsScss/colors.scss";
 
-.portfolioSlider {
+.photoSlider {
   margin-bottom: 11.2rem;
 
   h2 {
@@ -17,7 +17,6 @@
   height: max-content !important;
   margin-bottom: 4rem;
   padding-bottom: 2.4rem !important;
-
 }
 
 .swiper-slide {
@@ -31,25 +30,47 @@
 }
 
 @include onDesktop {
-  .portfolioSlider {
+  .photoSlider {
     padding-top: 8rem;
     position: relative;
     .container {
-
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       width: calc(100% - 23.4rem);
       max-width: 149.4rem;
       margin: 0 auto;
       align-items: start;
-      
-
       h2 {
         font-size: 3.2rem;
         margin-bottom: 3.2rem;
+        margin-top: 0;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 0.8rem;
+      padding-right: 9.8rem;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      width: 5.2rem;
+      height: 5.2rem;
+      background-image: url("../../assets/circle.svg");
+      background-size: cover;
+
+      img {
+        width: 2rem;
       }
     }
   }
+
   .mySwiper {
-    margin: 0 auto; 
+    margin: 0 auto;
     max-width: 172.8rem;
   }
 
@@ -58,3 +79,5 @@
     justify-content: start;
   }
 }
+
+

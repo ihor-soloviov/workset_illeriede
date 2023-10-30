@@ -79,7 +79,6 @@
     align-items: center;
     margin-bottom: 1.8rem;
 
-
     img {
       width: 3.6rem;
       height: 3.6rem;
@@ -90,7 +89,6 @@
       font-weight: 600;
       line-height: 130%;
       color: $main-white;
-      
     }
 
     &-header {
@@ -114,6 +112,10 @@
         font-size: 1.6rem;
         font-weight: 600;
         color: $main-red;
+      }
+
+      img {
+        width: 2rem;
       }
     }
   }

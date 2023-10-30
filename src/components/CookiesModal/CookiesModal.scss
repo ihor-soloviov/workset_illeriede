@@ -81,6 +81,8 @@
   &-dropdown__items {
     width: 97%;
     margin-bottom: 6.4rem;
+
+    
     @include onDesktop {
       font-size: 2rem;
     }

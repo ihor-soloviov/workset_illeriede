@@ -6,6 +6,7 @@ import { VideoSlide } from "./VideoSlide";
 import { SwiperSlide } from "swiper/react";
 import "./VideoSlider.scss";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
+import { Container } from "../Container";
 
 export const VideoSlider = () => {
   const [videos, setVideos] = useState(null);
@@ -16,11 +17,13 @@ export const VideoSlider = () => {
 
   return (
     <div className="videoSlider">
+      <Container>
+        <h2>Unsere Objekte</h2>
+      </Container>
       <SliderContainer
         timer={40000}
         swiperRef={videoRef}
         pagination={"videoPagination"}
-        headerText={"Unsere Objekte"}
       >
         {videos &&
           videos.map((video) => {

@@ -3,15 +3,19 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Slide } from "../Slide";
 import { fetchSliderPhotos } from "../../../utils/dataLoader";
 
-import { SwiperSlide } from "swiper/react";
+import { SwiperSlide, useSwiper } from "swiper/react";
 import { SliderContainer } from "../SliderContainer/SliderContainer";
 
+import { motion } from "framer-motion";
+import arrLeft from "../../assets/arrLeft.svg";
+import arrRight from "../../assets/arrRight.svg";
 import "swiper/scss";
 import "swiper/scss/pagination";
 
-import "./PortfolioSlider.scss";
+import "./PhotoSlider.scss";
+import { Container } from "../Container";
 
-export const PortfolioSlider = () => {
+export const PhotoSlider = () => {
   const [content, setContent] = useState(null);
   const swiperRef = useRef(null);
 
@@ -23,17 +27,34 @@ export const PortfolioSlider = () => {
   useEffect(() => {
     getData();
   }, [getData]);
-
   return (
-    <div className="portfolioSlider">
+    <div className="photoSlider">
+      <Container>
+        <h2>Unser Referenzen</h2>
+        <div className="photoSlider__buttons">
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.7 }}
+            className="photoSlider__button"
+            onClick={() => swiperRef?.current?.slidePrev()}
+          >
+            <img src={arrLeft} alt="arrLeft" />
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.7 }}
+            className="photoSlider__button"
+            onClick={() => swiperRef?.current?.slideNext()}
+          >
+            <img src={arrRight} alt="arrRight" />
+          </motion.button>
+        </div>
+      </Container>
       <SliderContainer
         timer={8000}
         swiperRef={swiperRef}
         pagination={"swiper-pagination"}
-        setCurrentSlider={() => {
-          return;
-        }}
-        headerText={"Unsere Referenzen"}
+
       >
         {content &&
           content.map((slide) => {

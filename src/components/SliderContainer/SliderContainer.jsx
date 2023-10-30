@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { Container } from "../Container";
 
 import { Swiper } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -8,19 +7,9 @@ import "swiper/scss";
 import "swiper/scss/pagination";
 import "./SliderContainer.scss";
 
-export const SliderContainer = ({
-  swiperRef,
-  children,
-  timer,
-  pagination,
-  headerText
-}) => {
+export const SliderContainer = ({ swiperRef, children, timer, pagination }) => {
   return (
     <div className="sliderContainer">
-      <Container>
-        <h2>{headerText}</h2>
-      </Container>
-
       <Swiper
         modules={[Pagination, Autoplay]}
         direction={"horizontal"}

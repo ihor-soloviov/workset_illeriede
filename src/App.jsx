@@ -43,10 +43,12 @@ export const App = () => {
       <LazyMotion features={domAnimation}>
         <Components.HomeSection />
       </LazyMotion>
-      <Components.PersoneOne />
+      <LazyMotion features={domAnimation}>
+        <Components.PersoneOne />
+      </LazyMotion>
       {window.innerWidth < 1024 && <Components.RedBlock />}
       <LazyLoadComponent>
-        <Components.PortfolioSlider setIsZumOpened={setIsZumOpened} />
+        <Components.PhotoSlider setIsZumOpened={setIsZumOpened} />
       </LazyLoadComponent>
       <Components.VideoSlider />
       <LazyLoadComponent>

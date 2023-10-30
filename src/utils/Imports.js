@@ -6,7 +6,7 @@ export { Lead } from "../components/Lead";
 export { EricTwo } from "../components/EricTwo";
 export { Benefits } from "../components/Benefits";
 export { Procents } from "../components/Procents";
-export { PortfolioSlider } from "../components/PortfolioSlider";
+export { PhotoSlider } from "../components/PhotoSlider";
 export { PortfolioFeedback } from "../components/PortfolioFeedback/PortfolioFeedback";
 export { Rating } from "../components/PortfolioFeedback/Rating";
 export { Footer } from "../components/Footer";

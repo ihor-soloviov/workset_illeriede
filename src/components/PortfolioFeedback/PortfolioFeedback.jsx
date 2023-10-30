@@ -26,22 +26,6 @@ export const PortfolioFeedback = () => {
       <div className="container">
         <div className="portfolio-feedback__header">
           <h3>Feedback unserer {window.innerWidth < 1024 && <br />} Kunden</h3>
-          {/*          {window.innerWidth > 1024 && (
-            <div className="portfolio-feedback__header--buttons">
-              <ButtonArrow
-                size={"small"}
-                direction={"left"}
-                color={"outline-black"}
-                onClick={() => portfolioRef.current?.slidePrev()}
-              />
-              <ButtonArrow
-                size={"small"}
-                direction={"right"}
-                color={"outline-black"}
-                onClick={() => portfolioRef.current?.slideNext()}
-              />
-            </div>
-          )} */}
         </div>
       </div>
       <div className="portfolio-feedback__items">
