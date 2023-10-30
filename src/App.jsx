@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import * as Components from "./utils/Imports.js";
+import { PortfolioSlider } from "./components/PortfolioSlider";
 
 import ReactPixel from "react-facebook-pixel";
 import TagManager from "react-gtm-module";
@@ -8,7 +9,6 @@ import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 export const App = () => {
   const [isCookiesShown, setIsCookiesShown] = useState(false);
-  const [isZumOpened, setIsZumOpened] = useState(false);
 
   useEffect(() => {
     ReactPixel.init(655308656583923);
@@ -47,13 +47,7 @@ export const App = () => {
         <Components.PersoneOne />
       </LazyMotion>
       {window.innerWidth < 1024 && <Components.RedBlock />}
-      <LazyLoadComponent>
-        <Components.PhotoSlider setIsZumOpened={setIsZumOpened} />
-      </LazyLoadComponent>
-      <Components.VideoSlider />
-      <LazyLoadComponent>
-        <Components.PortfolioFeedback />
-      </LazyLoadComponent>
+      <Components.PhotoSlider />
       <Components.Lead />
       <LazyMotion features={domAnimation}>
         <Components.EricTwo amount="0.2" />
@@ -61,7 +55,6 @@ export const App = () => {
       <Components.Benefits />
       <Components.Procents />
       <Components.Footer />
-      {isZumOpened && <Components.Zum setIsZumOpened={setIsZumOpened} />}
     </>
   );
 };

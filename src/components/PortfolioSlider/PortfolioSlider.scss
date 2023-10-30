@@ -1,0 +1,61 @@
+@import "../../../utilsScss/mixins.scss";
+@import "../../../utilsScss/colors.scss";
+
+.portfolioSlider {
+  margin-bottom: 112px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-top: 48px;
+    margin-bottom: 16px;
+  }
+}
+
+.mySwiper {
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+
+}
+
+.swiper-slide {
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  background: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  background-color: black;
+}
+
+@include onDesktop {
+  .portfolioSlider {
+    position: relative;
+    .container {
+
+      width: calc(100% - 234px);
+      max-width: 1494px;
+      margin: 0 auto;
+      align-items: start;
+
+      h2 {
+        font-size: 32px;
+        margin-bottom: 64px;
+      }
+    }
+  }
+  .mySwiper {
+    margin: 0 auto; 
+    max-width: 1728px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: start;
+  }
+}

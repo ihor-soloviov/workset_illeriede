@@ -1,11 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { Swiper } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
 
-import "swiper/scss";
-import "swiper/scss/pagination";
-import "./SliderContainer.scss";
 
 export const SliderContainer = ({ swiperRef, children, timer, pagination }) => {
   return (
@@ -20,9 +15,10 @@ export const SliderContainer = ({ swiperRef, children, timer, pagination }) => {
         }}
         speed={400}
         loop={true}
-        autoplay={{ delay: timer }}
+        autoplay={{ running: true, delay: 5000 }}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
+          console.log(swiper);
         }}
         className="mySwiper"
       >
