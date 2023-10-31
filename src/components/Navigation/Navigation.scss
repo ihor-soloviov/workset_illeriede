@@ -1,0 +1,40 @@
+@import "../../../utilsScss/colors.scss";
+@import "../../../utilsScss/mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 23.4rem);
+  max-width: 149.4rem;
+  margin: 0 auto;
+  align-items: start;
+
+  h2 {
+    font-size: 3.2rem;
+    margin-bottom: 3.2rem;
+    margin-top: 0;
+  }
+}
+.navigation {
+  &__buttons {
+    display: flex;
+    gap: 0.8rem;
+    padding-right: 9.8rem;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.2rem;
+    height: 5.2rem;
+    background-image: url("../../assets/circle.svg");
+    background-size: cover;
+
+    img {
+      width: 2rem;
+    }
+  }
+}

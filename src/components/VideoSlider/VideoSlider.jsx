@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
+import { Navigation as Nav } from "../Navigation";
 import videoCodes from "./api.json";
-import { SliderContainer } from "../SliderContainer/SliderContainer";
 import { VideoSlide } from "./VideoSlide";
-import { SwiperSlide } from "swiper/react";
-import "./VideoSlider.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
-import { Container } from "../Container";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "./VideoSlider.scss";
 
 export const VideoSlider = () => {
   const [videos, setVideos] = useState(null);
@@ -17,13 +17,23 @@ export const VideoSlider = () => {
 
   return (
     <div className="videoSlider">
-      <Container>
-        <h2>Unsere Objekte</h2>
-      </Container>
-      <SliderContainer
-        timer={40000}
-        swiperRef={videoRef}
-        pagination={"videoPagination"}
+      <Nav prev="prevVideo" next="nextVideo" />
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        direction={"horizontal"}
+        slidesPerView={1}
+        pagination={{
+          clickable: true,
+          el: ".videoPagination",
+        }}
+        navigation={{
+          nextEl: ".nextVideo",
+          prevEl: ".prevVideo",
+        }}
+        speed={400}
+        autoplay={{ delay: 8000, disableOnInteraction: false }}
+        onBeforeInit={(swiper) => (videoRef.current = swiper)}
+        className="videoSwiper"
       >
         {videos &&
           videos.map((video) => {
@@ -37,7 +47,8 @@ export const VideoSlider = () => {
               </SwiperSlide>
             );
           })}
-      </SliderContainer>
+      </Swiper>
+      <div className="videoPagination" />
     </div>
   );
 };

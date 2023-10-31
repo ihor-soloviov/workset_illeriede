@@ -16,7 +16,7 @@ export const EricTwo = ({ amount = 0}) => (
       initial="hidden"
       whileInView="visible"
       variants={textAnimationToRight}
-      viewport={{ amount: 0, once: true }}
+      viewport={{ amount, once: true }}
       className="ericTwo__photo"
       style={{ backgroundImage: `url(${eric})` }}
     />
@@ -27,16 +27,16 @@ export const EricTwo = ({ amount = 0}) => (
         viewport={{ amount, once: true }}
         className="ericTwo__text--inner"
       >
-        <m.h2 variants={opacityAnimation} custom={1}>
+        <m.h2 initial="hidden" whileInView="visible" variants={opacityAnimation} custom={1}>
           Boris Jung
         </m.h2>
-        <m.h3 variants={opacityAnimation} custom={2}>
+        <m.h3 initial="hidden" whileInView="visible" variants={opacityAnimation} custom={2}>
           Gründer der WorkSET Energy
         </m.h3>
-        <m.h4 variants={opacityAnimation} custom={3}>
+        <m.h4 viewport={{once: true}} initial="hidden" whileInView="visible" variants={opacityAnimation} custom={3}>
           <b>Beruf: </b> Wirtschaftsingenieur
         </m.h4>
-        <m.h4 variants={opacityAnimation} custom={3}>
+        <m.h4 viewport={{once: true}} initial="hidden" whileInView="visible" variants={opacityAnimation} custom={3}>
           <b>Wohnort: </b> Vöhringen bei Ulm
         </m.h4>
 
@@ -45,29 +45,30 @@ export const EricTwo = ({ amount = 0}) => (
           initial="hidden"
           whileInView="visible"
           viewport={{ amount, once: true }}
+          variants={opacityAnimation}
         >
-          <m.p variants={opacityAnimation} custom={3}>
+          <p>
             Boris war schon in seinem Studium ein Verfechter der Solarenergie
             und schrieb sein Bachelor mit herausragendem Ergebnis über dieses
             Thema. Nach seinem Studium als Wirtschaftsingenieur, hat er in
             namhaften Unternehmen Erfahrungen sammeln dürfen. Doch ihn hat seine
             Leidenschaft in die Welt der Photovoltaik zurückgeholt.
-          </m.p>
-          <m.p variants={opacityAnimation} custom={3}>
+          </p>
+          <p>
             Als Familienvater war es ein riesiger Schritt für ihn die Sicherheit
             in einem großen Unternehmen aufzugeben und sich „selbst“ und
             „ständig“ auf den Weg in die Nachhaltigkeit zu machen.
-          </m.p>
-          <m.p variants={opacityAnimation} custom={3}>
+          </p>
+          <p>
             Das gesamte Team der WorkSET Energy ist ihm dankbar, dass Boris Jung
             solch eine mutige Entscheidung getroffen hat!
-          </m.p>
-          <m.p variants={opacityAnimation} custom={3}>
+          </p>
+          <p>
             Durch seinen natürlichen Führungsstil hat er eine Schar von Experten
             um sich versammelt, die ihn heute bei seinen Visionen begleiten und
             unterstützen.
-          </m.p>
-          <m.p variants={opacityAnimation} custom={3}>
+          </p>
+          <p>
             Boris‘ Visionen: <br />
             - Deutschland ist und bleibt der Wirtschaftsstandort Nr. 1 in
             Europa. Seiner Meinung nach, ist das langfristig nur mit der
@@ -81,7 +82,7 @@ export const EricTwo = ({ amount = 0}) => (
             <br /> - Boris Jung setzt sich mit der WorkSET Energy für
             Nachhaltigkeit und Fortschritt, weit über die Landesgrenzen hinaus,
             ein.
-          </m.p>
+          </p>
         </m.div>
       </m.div>
     </div>

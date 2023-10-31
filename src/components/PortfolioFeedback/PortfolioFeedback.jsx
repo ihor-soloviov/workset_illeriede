@@ -2,13 +2,18 @@ import React, { useEffect, useRef, useState } from "react";
 import { Rating } from "./Rating";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { fetchReviews } from "../../../utils/dataLoader";
+import { motion } from "framer-motion";
+import arrLeft from "../../assets/arrLeft.svg";
+import arrRight from "../../assets/arrRight.svg";
 import apiReviews from "./reviews.json";
 import "./PortfolioFeedback.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
 import { videoSwiperSettings } from "../../utils/swiperSettings";
+import { Container } from "../Container";
+import { Navigation } from "../Navigation";
 
 export const PortfolioFeedback = () => {
   // const containerRef = useRef(null);
@@ -23,16 +28,16 @@ export const PortfolioFeedback = () => {
 
   return (
     <div className="portfolio-feedback">
-      <div className="container">
-        <div className="portfolio-feedback__header">
-          <h3>Feedback unserer {window.innerWidth < 1024 && <br />} Kunden</h3>
-        </div>
-      </div>
+      <Navigation prev="prevFeed" next="nextFeed" />
       <div className="portfolio-feedback__items">
         <Swiper
           {...videoSwiperSettings}
           onBeforeInit={(swiper) => {
             portfolioRef.current = swiper;
+          }}
+          navigation={{
+            nextEl: ".nextFeed",
+            prevEl: ".prevFeed",
           }}
         >
           {reviews &&

@@ -10,7 +10,7 @@ export const Presentation = () => (
       <div className="happy-hack"></div>
       <img className="benefit-line" src={line} alt="just a line" />
       <p className="presentation-benefit">
-        Module Trina Glas-Glas <br /> (435 Watt)
+        Module Trina Glas-Glas <br /> (440 Watt)
       </p>
     </div>
 

@@ -99,6 +99,10 @@
       letter-spacing: 0.5px;
     }
 
+    &-item {
+      margin-bottom: 2rem;
+    }
+
     .benefit-line {
       top: 6.1rem;
     }
@@ -111,7 +115,7 @@
     &-picture-block {
       .picture-block {
         width: 58rem;
-        height: 505;
+        height: 50.5rem;
         overflow: hidden;
 
         img {

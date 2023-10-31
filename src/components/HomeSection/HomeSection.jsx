@@ -51,10 +51,11 @@ export const HomeSection = () => {
           variants={opacityAnimation}
           viewport={{ once: true }}
         >
-          <LazyLoadImage src={location} alt="location icon" />
-          <p className="location-name">Illerrieden</p>
+          <p className="location-name">PV-Förderprogramm</p>
         </m.div>
-        <h2 className="location-header">PV-Montage für Sie </h2>
+        <h2 className="location-header">
+          PV-Förderprogramm für <br /> nur kurze Zeit!
+        </h2>
         <m.button
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.7 }}

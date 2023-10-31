@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import * as Components from "./utils/Imports.js";
-import { PortfolioSlider } from "./components/PortfolioSlider";
 
 import ReactPixel from "react-facebook-pixel";
 import TagManager from "react-gtm-module";
@@ -47,7 +46,11 @@ export const App = () => {
         <Components.PersoneOne />
       </LazyMotion>
       {window.innerWidth < 1024 && <Components.RedBlock />}
-      <Components.PhotoSlider />
+      <LazyLoadComponent>
+        <Components.PhotoSlider />
+      </LazyLoadComponent>
+      <Components.VideoSlider />
+      <Components.PortfolioFeedback />
       <Components.Lead />
       <LazyMotion features={domAnimation}>
         <Components.EricTwo amount="0.2" />

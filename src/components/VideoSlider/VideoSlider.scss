@@ -38,15 +38,35 @@
 }
 
 @include onDesktop {
-  .container {
-    h2 {
-      font-size: 3.6rem;
-      font-weight: 600;
-      margin-bottom: 4.8rem;
+  .videoSlider {
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: calc(100% - 23.4rem);
+      max-width: 149.4rem;
+      margin: 0 auto;
+      align-items: start;
+
+      h2 {
+        font-size: 3.2rem;
+        font-weight: 600;
+        margin-bottom: 3.2rem;
+        margin-top: 0;
+      }
     }
   }
 
+  .videoSwiper {
+    display: flex;
+    justify-content: center;
+    height: max-content;
+    padding-bottom: 2.4rem !important;
+  }
+
   .videoSlide {
+    width: 100%;
     &-inner {
       margin: 0 auto;
       width: 98rem;
@@ -58,11 +78,20 @@
     height: 60rem;
     position: relative;
   }
-  
+
   .youTube__video {
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 100%;
   }
+}
+
+.swiper-pagination {
+  width: 100%;
+  bottom: -2.4rem !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: black;
 }
