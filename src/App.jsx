@@ -5,6 +5,7 @@ import ReactPixel from "react-facebook-pixel";
 import TagManager from "react-gtm-module";
 import { LazyMotion, domAnimation } from "framer-motion";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
+import "./components/Container/Container.scss"
 
 export const App = () => {
   const [isCookiesShown, setIsCookiesShown] = useState(false);

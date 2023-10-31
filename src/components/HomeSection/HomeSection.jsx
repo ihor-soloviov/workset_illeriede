@@ -4,9 +4,9 @@ import { opacityAnimation } from "../../animations/animations";
 import { Container } from "../Container";
 import arrow from "../../assets/arrow.svg";
 import logo from "../../assets/logo.svg";
-import location from "../../assets/location.svg";
 
 import "./HomeSection.scss";
+import "../Container/Container.scss"
 import { Presentation } from "../Presentation/Presentation";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 

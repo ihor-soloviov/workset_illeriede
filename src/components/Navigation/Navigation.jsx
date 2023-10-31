@@ -7,24 +7,26 @@ import "./Navigation.scss";
 
 export const Navigation = ({ prev, next }) => (
   <div className="navigation">
-    <Container>
+    <Container className="navigationContainer">
       <h2>Unsere Objekte</h2>
-      <div className="navigation__buttons">
-        <motion.button
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.7 }}
-          className={`navigation__button ${prev}`}
-        >
-          <img src={arrLeft} alt="arrLeft" />
-        </motion.button>
-        <motion.button
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.7 }}
-          className={`navigation__button ${next}`}
-        >
-          <img src={arrRight} alt="arrRight" />
-        </motion.button>
-      </div>
+      {window.innerWidth > 1024 && (
+        <div className="navigation__buttons">
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.7 }}
+            className={`navigation__button ${prev}`}
+          >
+            <img src={arrLeft} alt="arrLeft" />
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.7 }}
+            className={`navigation__button ${next}`}
+          >
+            <img src={arrRight} alt="arrRight" />
+          </motion.button>
+        </div>
+      )}
     </Container>
   </div>
 );

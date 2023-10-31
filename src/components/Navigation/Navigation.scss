@@ -1,19 +1,21 @@
 @import "../../../utilsScss/colors.scss";
 @import "../../../utilsScss/mixins.scss";
 
-.container {
+.navigationContainer {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: calc(100% - 23.4rem);
   max-width: 149.4rem;
   margin: 0 auto;
   align-items: start;
+  margin-bottom: 3.2rem;
 
   h2 {
     font-size: 3.2rem;
-    margin-bottom: 3.2rem;
+    font-weight: 600;
+
     margin-top: 0;
   }
 }

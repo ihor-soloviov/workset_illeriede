@@ -117,3 +117,11 @@
     }
   }
 }
+
+.container {
+  display: flex;
+  align-items: start;
+  width: calc(100% - 23.4rem);
+    max-width: 149.4rem;
+    margin: 0 auto;
+}

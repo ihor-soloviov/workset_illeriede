@@ -1,26 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Rating } from "./Rating";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { fetchReviews } from "../../../utils/dataLoader";
-import { motion } from "framer-motion";
-import arrLeft from "../../assets/arrLeft.svg";
-import arrRight from "../../assets/arrRight.svg";
 import apiReviews from "./reviews.json";
+import { videoSwiperSettings } from "../../utils/swiperSettings";
+import { Navigation } from "../Navigation";
 import "./PortfolioFeedback.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { videoSwiperSettings } from "../../utils/swiperSettings";
-import { Container } from "../Container";
-import { Navigation } from "../Navigation";
-
 export const PortfolioFeedback = () => {
-  // const containerRef = useRef(null);
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    // fetchReviews();
     setReviews(apiReviews);
   }, []);
 
