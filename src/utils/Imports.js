@@ -12,3 +12,4 @@ export { Rating } from "../components/PortfolioFeedback/Rating";
 export { Footer } from "../components/Footer";
 export { VideoSlider } from "../components/VideoSlider";
 export { Locations } from "../components/Locations";
+export { Callback } from "../components/Callback";

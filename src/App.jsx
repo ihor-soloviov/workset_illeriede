@@ -41,6 +41,9 @@ export const App = () => {
         />
       )}
       <LazyMotion features={domAnimation}>
+        <Components.Callback />
+      </LazyMotion>
+      <LazyMotion features={domAnimation}>
         <Components.HomeSection />
       </LazyMotion>
       <LazyMotion features={domAnimation}>

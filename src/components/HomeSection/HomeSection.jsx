@@ -57,7 +57,7 @@ export const HomeSection = () => {
           PV-Förderprogramm für <br /> nur kurze Zeit!
         </h2>
         <m.button
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.7 }}
           className="location-scroll"
           onClick={() => scrollToLead()}

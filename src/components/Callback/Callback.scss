@@ -1,0 +1,86 @@
+@import "../../../utilsScss/colors.scss";
+@import "../../../utilsScss/mixins.scss";
+
+.callback {
+  position: fixed;
+  width: 100vw;
+  height: 8rem;
+  bottom: 5rem;
+  right: 5rem;
+  pointer-events: all;
+  z-index: 4;
+
+
+  @include onMobile {
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  &-inner {
+    position: absolute;
+    z-index: 4;
+    right: 1rem;
+    bottom: -20rem;
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2.4rem;
+    border-radius: 4px;
+    background: var(--white-main, #fff);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+    b {
+      font-size: 14px;
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  .isOpened {
+    bottom: 10.4rem;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &-contact {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+
+    p,
+    a {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &-button {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    bottom: 0;
+    right: 0rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 #D32839;
+
+    cursor: pointer;
+    @include pulseAnimation;
+
+    &:hover {
+      animation: none;
+    }
+
+    @include onMobile {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}
+
+

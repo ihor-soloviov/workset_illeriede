@@ -18,7 +18,7 @@ export const Locations = () => {
 
         <div className="locations__inner">
           {locations.map((el) => (
-            <m.div whileHover={{ scale: 1.2 }} key={el} className="location">
+            <m.div whileHover={{ scale: 1.1 }} key={el} className="location">
               <img src={pin} alt="location pin" />
               <p>{el}</p>
             </m.div>
