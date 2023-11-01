@@ -69,6 +69,14 @@
     height: 72.6rem;
     box-shadow: none;
 
+    .container {
+      display: flex;
+      align-items: start;
+      width: calc(100% - 23.4rem);
+        max-width: 149.4rem;
+        margin: 0 auto;
+    }
+
     &-image__block {
       width: 115rem;
       height: 72.8rem;
@@ -118,10 +126,3 @@
   }
 }
 
-.container {
-  display: flex;
-  align-items: start;
-  width: calc(100% - 23.4rem);
-    max-width: 149.4rem;
-    margin: 0 auto;
-}

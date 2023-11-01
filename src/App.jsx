@@ -5,7 +5,7 @@ import ReactPixel from "react-facebook-pixel";
 import TagManager from "react-gtm-module";
 import { LazyMotion, domAnimation } from "framer-motion";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
-import "./components/Container/Container.scss"
+import "./components/Container/Container.scss";
 
 export const App = () => {
   const [isCookiesShown, setIsCookiesShown] = useState(false);
@@ -47,6 +47,9 @@ export const App = () => {
         <Components.PersoneOne />
       </LazyMotion>
       {window.innerWidth < 1024 && <Components.RedBlock />}
+      <LazyMotion features={domAnimation}>
+        <Components.Locations />
+      </LazyMotion>
       <LazyLoadComponent>
         <Components.PhotoSlider />
       </LazyLoadComponent>

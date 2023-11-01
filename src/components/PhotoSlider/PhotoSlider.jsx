@@ -35,8 +35,8 @@ export const PhotoSlider = () => {
           el: ".swiper-pagination",
         }}
         navigation={{
-          nextEl: ".prevPhoto",
-          prevEl: ".nextPhoto",
+          nextEl: ".nextPhoto",
+          prevEl: ".prevPhoto",
         }}
         speed={400}
         autoplay={{ delay: 50000, disableOnInteraction: false }}

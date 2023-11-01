@@ -3,7 +3,7 @@
 
 .photoSlider {
   margin-bottom: 11.2rem;
-
+  position: relative;
 }
 
 .photoSwiper {
@@ -26,6 +26,17 @@
   .photoSlider {
     padding-top: 8rem;
     position: relative;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: calc(100% - 23.4rem);
+      max-width: 149.4rem;
+      margin: 0 auto;
+      align-items: start;
+    }
   }
 
   .photoSwiper {
@@ -37,5 +48,3 @@
     justify-content: start;
   }
 }
-
-
