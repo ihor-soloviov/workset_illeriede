@@ -25,7 +25,7 @@ export const PhotoSlider = () => {
 
   return (
     <div className="photoSlider">
-      <Nav prev="prevPhoto" next="nextPhoto" />
+      <Nav prev="prevPhoto" next="nextPhoto" title={"Unsere Referenzen"} />
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         direction={"horizontal"}

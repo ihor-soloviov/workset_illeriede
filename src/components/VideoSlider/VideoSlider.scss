@@ -3,7 +3,20 @@
 
 .videoSlider {
   width: 100%;
+  position: relative;
   margin-bottom: 11rem;
+
+  .swiper {
+    height: max-content;
+  }
+
+  .swiper-wrapper {
+    height: max-content;
+  }
+
+  .swiper-slide {
+    height: max-content;
+  }
 }
 
 .videoSlide {
@@ -31,6 +44,7 @@
 }
 
 .videoPagination {
+  position: absolute;
   width: 100%;
   bottom: -2.4rem !important;
   display: flex;

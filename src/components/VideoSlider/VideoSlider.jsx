@@ -17,7 +17,7 @@ export const VideoSlider = () => {
 
   return (
     <div className="videoSlider">
-      <Nav prev="prevVideo" next="nextVideo" />
+      <Nav prev="prevVideo" next="nextVideo" title={"Unsere Objekte"} />
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         direction={"horizontal"}
@@ -31,7 +31,7 @@ export const VideoSlider = () => {
           prevEl: ".prevVideo",
         }}
         speed={400}
-        autoplay={{ delay: 8000, disableOnInteraction: false }}
+        autoplay={{ delay: 80000, disableOnInteraction: false }}
         onBeforeInit={(swiper) => (videoRef.current = swiper)}
         className="videoSwiper"
       >

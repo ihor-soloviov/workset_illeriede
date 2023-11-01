@@ -20,7 +20,7 @@ export const PortfolioFeedback = () => {
 
   return (
     <div className="portfolio-feedback">
-      <Navigation prev="prevFeed" next="nextFeed" />
+      <Navigation prev="prevFeed" next="nextFeed" title={"Unsere Kunden"} />
       <div className="portfolio-feedback__items">
         <Swiper
           {...videoSwiperSettings}

@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Container } from "../Container";
 import "./Navigation.scss";
 
-export const Navigation = ({ prev, next }) => (
+export const Navigation = ({ prev, next, title }) => (
   <div className="navigation">
     <Container className="navigationContainer">
-      <h2>Unsere Objekte</h2>
+      <h2>{title}</h2>
       {window.innerWidth > 1024 && (
         <div className="navigation__buttons">
           <motion.button

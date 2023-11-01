@@ -59,7 +59,9 @@ export const App = () => {
       <LazyMotion features={domAnimation}>
         <Components.EricTwo amount="0.2" />
       </LazyMotion>
-      <Components.Benefits />
+      <LazyMotion features={domAnimation}>
+        <Components.Benefits />
+      </LazyMotion>
       <Components.Procents />
       <Components.Footer />
     </>

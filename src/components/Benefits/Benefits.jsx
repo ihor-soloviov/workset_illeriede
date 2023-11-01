@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { m } from "framer-motion";
 import { Container } from "../Container";
 import firstPic from "../../assets/firstPic.svg";
 import secPic from "../../assets/secPic.svg";
@@ -35,10 +36,10 @@ export const Benefits = () => {
         <div className="benefits-container">
           <ul className="benefits-inner">
             {benefits.map((benefit) => (
-              <li className="benefits-item" key={benefit.id}>
+              <m.li whileHover={{scale: 1.1}} className="benefits-item" key={benefit.id}>
                 <img width={65} src={benefit.img} alt="da" />
                 <p>{benefit.text}</p>
-              </li>
+              </m.li>
             ))}
           </ul>
         </div>
