@@ -52,7 +52,6 @@
 }
 
 @include onDesktop {
-
   .videoSwiper {
     display: flex;
     justify-content: center;
@@ -88,5 +87,7 @@
 }
 
 .swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
   background-color: black;
 }
