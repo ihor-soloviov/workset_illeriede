@@ -1,5 +1,5 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import "./Lead.scss";
 import { FirstStep } from "./components/FirstStep";
 import { SecondStep } from "./components/SecondStep";
 import { ThirdStep } from "./components/ThirdStep";
@@ -10,8 +10,10 @@ import { SeventhStep } from "./components/SeventhStep";
 import { Done } from "./components/Done";
 import { Loader } from "./components/Loader";
 import { sendingData } from "./api/sendData";
+import "./Lead.scss";
+import { useNavigate } from "react-router-dom";
 
-export const Lead = () => {
+export const Lead = ({ leadRef }) => {
   const [step, setStep] = useState(1);
   const [zweck, setZweck] = useState(null);
   const [energieverbrauch, setEnergieverbrauch] = useState(0);
@@ -21,6 +23,15 @@ export const Lead = () => {
   const [adresse, setAdresse] = useState(null);
   const [userData, setUserData] = useState(null);
   const [loader, setLoader] = useState(false);
+
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (step === 8) {
+      navigate('/ty-page');
+    }
+  }, [step]);
 
   useEffect(() => {
     sendingData(
@@ -33,6 +44,10 @@ export const Lead = () => {
       userData
     );
   }, [userData]);
+
+
+
+
 
   const switchComponent = () => {
     switch (step) {
@@ -83,7 +98,7 @@ export const Lead = () => {
   };
 
   return (
-    <div className="lead" id="lead">
+    <div className="lead" id="lead" ref={leadRef}>
       <div className="lead-container">{switchComponent()}</div>
       {loader && <Loader />}
     </div>

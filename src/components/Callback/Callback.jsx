@@ -3,10 +3,10 @@
 import { m } from "framer-motion";
 import phone from "../../assets/phone.svg";
 import callback from "../../assets/callback.png";
-import "./Callback.scss";
 import classNames from "classnames";
 import { useState } from "react";
 import { callbackAnimation } from "../../animations/animations";
+import "./Callback.scss";
 
 export const Callback = () => {
   const [isOpened, setIsOpened] = useState(false);

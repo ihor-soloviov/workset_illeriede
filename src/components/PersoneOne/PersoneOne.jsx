@@ -16,7 +16,7 @@ export const PersoneOne = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={textAnimationToLeft}
-                viewport={{amount: 0.5, once: true}}
+                viewport={{ amount: 0.5, once: true }}
               >
                 Boris Jung
               </m.h2>
@@ -24,7 +24,7 @@ export const PersoneOne = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={textAnimationToLeft}
-                viewport={{amount: 0.5, once: true}}
+                viewport={{ amount: 0.5, once: true }}
               >
                 Gründer der WorkSET Energy
               </m.h4>
@@ -35,9 +35,9 @@ export const PersoneOne = () => {
               whileInView="visible"
               variants={textAnimationToLeft}
               custom={2}
-              viewport={{amount: 0.5, once: true}}
+              viewport={{ amount: 0.5, once: true }}
             >
-              Unsere Experten stehen bereit, um Illerrieden bei der Umstellung
+              Unsere Experten stehen bereit, um Deutschland bei der Umstellung
               auf Solarenergie zu unterstützen. Wir helfen Ihnen kostenlos,
               unkompliziert und effizient bei der Auswahl der besten Solarlösung
               für Ihr Zuhause und verwenden nur hochwertige Materialien von
@@ -51,7 +51,7 @@ export const PersoneOne = () => {
               whileInView="visible"
               variants={textAnimationToLeft}
               custom={2.3}
-              viewport={{amount: 0.5, once: true}}
+              viewport={{ amount: 0.5, once: true }}
             >
               Die Rettung unseres Planeten ist unsere oberste Priorität, und wir
               sind stolz darauf, dass unsere Solarsysteme das Leben unserer
@@ -66,12 +66,12 @@ export const PersoneOne = () => {
               whileInView="visible"
               variants={textAnimationToLeft}
               custom={2.6}
-              viewport={{amount: 0.5, once: true}}
+              viewport={{ amount: 0.5, once: true }}
             >
               Kontaktieren Sie uns, um mehr darüber zu erfahren, wie die
               Installation einer Solaranlage Ihnen und Ihrer Familie
               zugutekommen kann. Gemeinsam gestalten wir eine nachhaltige
-              Zukunft für Illerrieden!
+              Zukunft für Deutschland!
             </m.p>
           </div>
           <div className="redblock-inner">

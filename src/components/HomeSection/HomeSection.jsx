@@ -9,12 +9,20 @@ import "./HomeSection.scss";
 import "../Container/Container.scss"
 import { Presentation } from "../Presentation/Presentation";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-export const HomeSection = () => {
-  const scrollToLead = () => {
-    const target = document.getElementById("lead");
-    target.scrollIntoView({ behavior: "smooth" });
-  };
+export const HomeSection = ({scrollToLead}) => {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (window.location.pathname.includes('/ty-page')) {
+      const newPath = window.location.pathname.replace('/ty-page', '');
+      navigate(newPath);
+    }
+  }, []);
+
   return (
     <m.div
       initial="hidden"

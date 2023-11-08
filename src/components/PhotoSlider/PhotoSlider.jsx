@@ -39,7 +39,7 @@ export const PhotoSlider = () => {
           prevEl: ".prevPhoto",
         }}
         speed={400}
-        autoplay={{ delay: 50000, disableOnInteraction: false }}
+        autoplay={{ delay: 10000, disableOnInteraction: false }}
         onBeforeInit={(swiper) => (swiperRef.current = swiper)}
         className="photoSwiper"
       >

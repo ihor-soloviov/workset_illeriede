@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import markerBlack from "../../assets/markerBlack.svg";
 import "./Slide.scss";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const Slide = React.memo(({ title, list, text, images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +18,8 @@ export const Slide = React.memo(({ title, list, text, images }) => {
     <div className="container">
       <div className="slide" onClick={() => nextSlide()}>
         <div className="slide-image__block">
-          <img
+          <LazyLoadImage
+          effect="blur"
             className="slide-image"
             src={`https://api.work-set.eu${images[currentIndex].attributes.url}`}
             alt="slide-photo"

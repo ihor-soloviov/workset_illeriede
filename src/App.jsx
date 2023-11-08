@@ -1,17 +1,22 @@
-import { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState, useRef } from "react";
+import {
+  BrowserRouter as Router, useNavigate} from "react-router-dom";
 import * as Components from "./utils/Imports.js";
 
 import ReactPixel from "react-facebook-pixel";
 import TagManager from "react-gtm-module";
 import { LazyMotion, domAnimation } from "framer-motion";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
 import "./components/Container/Container.scss";
 
 export const App = () => {
   const [isCookiesShown, setIsCookiesShown] = useState(false);
 
+  const leadRef = useRef(null);
+  
+
   useEffect(() => {
-    ReactPixel.init(655308656583923);
+    ReactPixel.init(1022736382298315);
     TagManager.initialize({ gtmId: "GTM-5K2S8JNN" });
 
     ReactPixel.pageView();
@@ -32,8 +37,14 @@ export const App = () => {
     localStorage.setItem("showModal", "false");
   };
 
+  const scrollToLead = () => {
+    if (leadRef?.current) {
+      leadRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <>
+    <Router>
       {isCookiesShown && (
         <Components.CookiesModal
           setModalCookiesVisibility={setModalCookiesVisibility}
@@ -44,7 +55,7 @@ export const App = () => {
         <Components.Callback />
       </LazyMotion>
       <LazyMotion features={domAnimation}>
-        <Components.HomeSection />
+        <Components.HomeSection scrollToLead={scrollToLead} />
       </LazyMotion>
       <LazyMotion features={domAnimation}>
         <Components.PersoneOne />
@@ -53,12 +64,10 @@ export const App = () => {
       <LazyMotion features={domAnimation}>
         <Components.Locations />
       </LazyMotion>
-      <LazyLoadComponent>
-        <Components.PhotoSlider />
-      </LazyLoadComponent>
-      <Components.VideoSlider />
+      <Components.PhotoSlider />
+      <Components.VideoSlider leadRef={leadRef} />
       <Components.PortfolioFeedback />
-      <Components.Lead />
+      <Components.Lead leadRef={leadRef} />
       <LazyMotion features={domAnimation}>
         <Components.EricTwo amount="0.2" />
       </LazyMotion>
@@ -67,6 +76,6 @@ export const App = () => {
       </LazyMotion>
       <Components.Procents />
       <Components.Footer />
-    </>
+    </Router>
   );
 };

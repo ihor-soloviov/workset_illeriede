@@ -31,7 +31,6 @@ export const VideoSlider = () => {
           prevEl: ".prevVideo",
         }}
         speed={400}
-        autoplay={{ delay: 80000, disableOnInteraction: false }}
         onBeforeInit={(swiper) => (videoRef.current = swiper)}
         className="videoSwiper"
       >
@@ -41,7 +40,7 @@ export const VideoSlider = () => {
 
             return (
               <SwiperSlide key={id}>
-                <LazyLoadComponent>
+                <LazyLoadComponent visibleByDefault={true}>
                   <VideoSlide video_code={video_code} />
                 </LazyLoadComponent>
               </SwiperSlide>
